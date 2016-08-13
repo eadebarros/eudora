@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {font-family: MyriadPro-SemiboldCond;src: url(myriad-pro/MyriadPro-SemiboldCond.otf);}
+@font-face {font-family: MyriadPro-LightCond;src: url(myriad-pro/MyriadPro-LightCond.otf);}
+@font-face {font-family: MyriadPro-Cond;src: url(myriad-pro/MyriadPro-Cond.otf);}
+
+.branca {
+	color: rgb(255, 255, 255);
+}
+.dourada {
+	color: rgb(172, 145, 86);
+}
+
+.upper{
+	text-transform:uppercase!important;
+}
+
+.lower{
+	text-transform:lowercase!important;
+}
+
+.MyriadSemiBold {
+	font-family: MyriadPro-SemiboldCond;
+  	line-height: 1.2;
+}
+.MyriadLight {
+	font-family: MyriadPro-LightCond;
+  	line-height: 1.2;
+}
+
+
+/* FONT-SIZE */
+.font-55{
+	font-size:55px!important;
+}
+.font-48{
+	font-size:48px!important;
+}
+.font-30{
+	font-size: 30px!important;
+}
+.font-36{
+	font-size: 36px!important;
+}
+.font-24{
+	font-size: 24px!important;
+}
+.font-16{
+	font-size: 16px!important;
+}
+
+
+/* PADDINGS */
+.padding-left-15 {
+	padding-left:15px!important;
+}
+.padding-topbottom-10{
+	padding-top:10px!important;
+	padding-bottom:10px!important;
+}
+.padding-topbottom-20{
+	padding-top:20px!important;
+	padding-bottom:20px!important;
+}
+.padding-left-right-10{
+	padding-left:10px!important;
+	padding-right: 10px!important;
+}
+
+/* MARGINS */
+.margin-left-15 {
+	padding-left:15px!important;
+}
+.margin-topbottom-5{
+	padding-top:5px!important;
+	padding-bottom:5px!important;
+}
+.margin-topbottom-10{
+	padding-top:10px!important;
+	padding-bottom:10px!important;
+}
+.margin-topbottom-20{
+	padding-top:20px!important;
+	padding-bottom:20px!important;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eudora</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+@font-face {font-family: MyriadPro-SemiboldCond;src: url(myriad-pro/MyriadPro-SemiboldCond.otf);}
+@font-face {font-family: MyriadPro-LightCond;src: url(myriad-pro/MyriadPro-LightCond.otf);}
+@font-face {font-family: MyriadPro-Cond;src: url(myriad-pro/MyriadPro-Cond.otf);}
+
+.titulo{
+font-size: 80px;
+color: rgb(172, 145, 86);
+line-height: 0.867;
+text-align: left;
+font-family:MyriadPro-Cond;
+}
+.logo{
+border-radius: 5px;
+background-color: rgb(172, 145, 86);
+top: -13px;
+width: 115px;
+height: 113px;
+}
+.logo img{top: 50px;left: 18px;position:absolute;}
+
+.bgHome{background-size:100%;background-repeat:no-repeat;height:682px;background-color:#411E1E;background-size:inherit;}
+
+#Home{background-image:url(images/bgHome.jpg);}
+
+.footer {background-color: rgb(0, 0, 0);left: 0px; padding-top:40px; padding-bottom:40px;}
+
+#btnIniciar{margin-top:10px;}
+
+.left55{margin-left:55px;} .left70{margin-left:70px;}
+
+.faleComEudora{
+	font-family: MyriadPro-SemiboldCond;
+	font-size:24px;
+	text-transform:uppercase;
+	color:#FFF;
+	margin-top:6px;
+	}
+
+.txtlegal{
+	font-family: MyriadPro-LightCond;
+	font-size:15px;
+	color:#FFF;
+	margin-top: 12px	
+	}
+.mtop10{
+	margin-top:10px;
+	}
+
+.mleft70{
+	margin-left:70px;}
+
+.ulleft30{padding-left:30px;}
+
+@media (min-width:992px) and (max-width:1199px){
+.bgHome{height:564px; }
+.left55{margin-left:30px;}
+.left70{margin-left:45px;}
+.titulo{font-size: 75px;}
+.ulleft30{padding-left:0px;}
+	}
+
+@media (min-width:768px) and (max-width:991px){
+.left55{margin-left:20px;}
+.left70{margin-left:35px;}
+.titulo{font-size: 65px;}
+.ulleft30{padding-left:45px;}
+	}
+
+@media (min-width:320px) and (max-width:767px){
+.left55{margin-left:-5px;}
+.left70{margin-left:10px;}
+.titulo{font-size:35px;}
+.bgHome{background-size:100%;background-repeat:no-repeat;height:450px;background-size:cover; background-position:-80px 0px;}
+.titulo{margin-top:0px;	}
+#Home{background-image:url(images/bgHomeMob.jpg);}
+
+}
+	
+</style>
+
+  </head>
+  
+  <body>
+
+<div class="container bgHome" id="Home">
+	<div class="row"><div class="col-xs-2 logo left70"><img src="images/_0000_logoEudora.png" alt=""/></div></div>
+	<div class="row"><div class="col-xs-7 col-sm-5 left55"><h3 class="titulo"><span style="font-family:MyriadPro-LightCond">Conheça o seu </span>perfume ideal</h3></div></div>
+	<div class="row"><div class="col-xs-5 col-sm-3 left55"><div id="btnIniciar"><img class="img-responsive" src="images/_0003_btn.png" alt=""/></div></div></div>
+</div>
+<div class="container footer">
+	<div class="row">
+	  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
+      <div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
+        <div class="col-xs-12 col-sm-4 col-md-2">
+        	<ul class="list-inline mtop10 ulleft30">
+            	<li><img src="images/_0006_facebook.png" alt=""/></li>
+                <li><img src="images/_0007_snapchat.png" alt=""/></li>
+                <li><img src="images/_0008_youtube.png" alt=""/></li>
+                <li><img src="images/_0009_instagram.png" alt=""/></li>
+        	</ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt=""/></div>
+	</div>
+</div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {font-family: MyriadPro-SemiboldCond;src: url(myriad-pro/MyriadPro-SemiboldCond.otf);}
+@font-face {font-family: MyriadPro-LightCond;src: url(myriad-pro/MyriadPro-LightCond.otf);}
+@font-face {font-family: MyriadPro-Cond;src: url(myriad-pro/MyriadPro-Cond.otf);}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 308px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.desc {
+    padding: 8px 0 8px;
+    text-align: left;
+	color:rgb(172, 145, 86);
+	font-family: MyriadPro-LightCond;
+	font-size:24px;
+	padding-left:30px;
+	}
+
+
+.desc:hover {
+	color:rgb(255, 255, 255);
+	}
+	
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content ul li:hover{
+	background-color:rgb(172, 145, 86);
+	color:FFF !important;
+}
+
