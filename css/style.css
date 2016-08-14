@@ -1,86 +1,170 @@
 @charset "utf-8";
+
 /* CSS Document */
 
-@font-face {font-family: MyriadPro-SemiboldCond;src: url(myriad-pro/MyriadPro-SemiboldCond.otf);}
-@font-face {font-family: MyriadPro-LightCond;src: url(myriad-pro/MyriadPro-LightCond.otf);}
-@font-face {font-family: MyriadPro-Cond;src: url(myriad-pro/MyriadPro-Cond.otf);}
+@font-face {
+	font-family: MyriadPro-SemiboldCond;
+	src: url(myriad-pro/MyriadPro-SemiboldCond.otf);
+}
+
+@font-face {
+	font-family: MyriadPro-LightCond;
+	src: url(myriad-pro/MyriadPro-LightCond.otf);
+}
+
+@font-face {
+	font-family: MyriadPro-Cond;
+	src: url(myriad-pro/MyriadPro-Cond.otf);
+}
+
+
+/* MEDIA QUERIES CELLPHONES */
+
+@media (max-width:480px) {
+	/* FONT-SIZE */
+	.font-55 {
+		font-size: 25px!important;
+	}
+	.font-48 {
+		font-size: 20px!important;
+	}
+	.font-30 {
+		font-size: 15px!important;
+	}
+	.font-36 {
+		font-size: 13px!important;
+	}
+	.font-24 {
+		font-size: 12px!important;
+	}
+	.font-16 {
+		font-size: 8px!important;
+	}
+	.bullet-numero {
+		padding-right: 15px;
+		max-width: 45px;
+	}
+	.blocks {
+		margin: 10px 0;
+	}
+}
 
 .branca {
 	color: rgb(255, 255, 255);
 }
+
 .dourada {
 	color: rgb(172, 145, 86);
 }
 
-.upper{
-	text-transform:uppercase!important;
+.upper {
+	text-transform: uppercase!important;
 }
 
-.lower{
-	text-transform:lowercase!important;
+.lower {
+	text-transform: lowercase!important;
 }
 
 .MyriadSemiBold {
 	font-family: MyriadPro-SemiboldCond;
-  	line-height: 1.2;
+	line-height: 1.2;
 }
+
 .MyriadLight {
 	font-family: MyriadPro-LightCond;
-  	line-height: 1.2;
+	line-height: 1.2;
 }
 
 
 /* FONT-SIZE */
-.font-55{
-	font-size:55px!important;
+
+.font-55 {
+	font-size: 55px;
 }
-.font-48{
-	font-size:48px!important;
+
+.font-48 {
+	font-size: 48px;
 }
-.font-30{
-	font-size: 30px!important;
+
+.font-30 {
+	font-size: 30px;
 }
-.font-36{
-	font-size: 36px!important;
+
+.font-36 {
+	font-size: 36px;
 }
-.font-24{
-	font-size: 24px!important;
+
+.font-24 {
+	font-size: 24px;
 }
-.font-16{
-	font-size: 16px!important;
+
+.font-16 {
+	font-size: 16px;
 }
 
 
 /* PADDINGS */
+
 .padding-left-15 {
-	padding-left:15px!important;
+	padding-left: 15px!important;
 }
-.padding-topbottom-10{
-	padding-top:10px!important;
-	padding-bottom:10px!important;
+
+.padding-topbottom-10 {
+	padding-top: 10px!important;
+	padding-bottom: 10px!important;
 }
-.padding-topbottom-20{
-	padding-top:20px!important;
-	padding-bottom:20px!important;
+
+.padding-topbottom-20 {
+	padding-top: 20px!important;
+	padding-bottom: 20px!important;
 }
-.padding-left-right-10{
-	padding-left:10px!important;
+
+.padding-left-right-10 {
+	padding-left: 10px!important;
 	padding-right: 10px!important;
 }
 
+
 /* MARGINS */
+
 .margin-left-15 {
-	padding-left:15px!important;
+	margin-left: 15px!important;
 }
-.margin-topbottom-5{
-	padding-top:5px!important;
-	padding-bottom:5px!important;
+
+.margin-topbottom-5 {
+	margin-top: 5px!important;
+	margin-bottom: 5px!important;
 }
-.margin-topbottom-10{
-	padding-top:10px!important;
-	padding-bottom:10px!important;
+
+.margin-topbottom-10 {
+	margin-top: 10px!important;
+	margin-bottom: 10px!important;
 }
-.margin-topbottom-20{
-	padding-top:20px!important;
-	padding-bottom:20px!important;
+
+.margin-topbottom-20 {
+	margin-top: 20px!important;
+	margin-bottom: 20px!important;
+}
+
+.bullet-numero {
+	padding-right: 15px;
+}
+
+.refazer{
+	margin:55px 55px 35px 0;
+}
+
+.carousel-indicators{
+	bottom:-50px;
+}
+.carousel{
+	min-width: 290px;
+}
+.carousel-control.left{
+	background: none!important;
+	left:-20px!important;
+}
+.carousel-control.right{
+	background: none!important;
+	right:-40px!important;
 }

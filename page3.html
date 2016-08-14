@@ -1,351 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Eudora</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- checkbox -->
-    <link rel="stylesheet" href="css/stylesheet-image-based.css">
-    <!-- checkbox -->
-    <link rel="stylesheet" href="css/estiloSelect1.css">
-    
-    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+	<title>Eudora</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- checkbox -->
+	<link rel="stylesheet" href="css/stylesheet-image-based.css">
+	<!-- checkbox -->
+	<link rel="stylesheet" href="css/estiloSelect1.css">
+
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
 	<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
 
-<style>
-@font-face {font-family: MyriadPro-SemiboldCond;src: url(myriad-pro/MyriadPro-SemiboldCond.otf);}
-@font-face {font-family: MyriadPro-LightCond;src: url(myriad-pro/MyriadPro-LightCond.otf);}
-@font-face {font-family: MyriadPro-Cond;src: url(myriad-pro/MyriadPro-Cond.otf);}
+	<style>
+		@font-face {
+			font-family: MyriadPro-SemiboldCond;
+			src: url(myriad-pro/MyriadPro-SemiboldCond.otf);
+		}
+		
+		@font-face {
+			font-family: MyriadPro-LightCond;
+			src: url(myriad-pro/MyriadPro-LightCond.otf);
+		}
+		
+		@font-face {
+			font-family: MyriadPro-Cond;
+			src: url(myriad-pro/MyriadPro-Cond.otf);
+		}
+		
+		a {
+			text-decoration: none !important;
+		}
+		
+		.logo {
+			border-radius: 5px;
+			background-color: rgb(172, 145, 86);
+			top: -13px;
+			width: 115px;
+			height: 113px;
+		}
+		
+		.logo img {
+			top: 50px;
+			left: 18px;
+			position: absolute;
+		}
+		
+		.bg-5-left {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			height: 682px;
+			background-color: #411E1E;
+		}
+		
+		.bg-7-right {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			height: 682px;
+			background-color: #411E1E;
+			background-image: url(images/pag3/_0008_background.png);
+		}
+		
+		#chic {
+			background-image: url(images/pag3/_0007_bgLeft.png);
+		}
+		
+		.footer {
+			background-color: rgb(0, 0, 0);
+			left: 0px;
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		
+		#btnIniciar {
+			margin-top: 10px;
+		}
+		
+		.left55 {
+			margin-left: 55px;
+		}
+		
+		.left70 {
+			margin-left: 70px;
+		}
+		
+		.tituloPageMeio h3 {
+			font-family: MyriadPro-SemiboldCond;
+			color: rgb(172, 145, 86);
+			font-size: 58.424px;
+			line-height: 1.2;
+		}
+		
+		.textoPageMeio p {
+			font-size: 35px;
+			font-family: MyriadPro-LightCond;
+			color: rgb(255, 255, 255);
+			margin-top: -15px;
+			letter-spacing: 0.03em;
+		}
+		
+		.textboxp2 p {
+			font-size: 28px;
+			color: rgb(255, 255, 255);
+			line-height: 1.2;
+			font-family: MyriadPro-LightCond;
+			letter-spacing: 0.03em;
+		}
+		
+		.faleComEudora {
+			font-family: MyriadPro-SemiboldCond;
+			font-size: 24px;
+			text-transform: uppercase;
+			color: #FFF;
+			margin-top: 6px;
+		}
+		
+		.txtlegal {
+			font-family: MyriadPro-LightCond;
+			font-size: 15px;
+			color: #FFF;
+			margin-top: 12px
+		}
+		
+		.mtop10 {
+			margin-top: 10px;
+		}
+		
+		.mtop20 {
+			margin-top: 20px;
+		}
+		
+		.mleft70 {
+			margin-left: 70px;
+		}
+		
+		.ulleft30 {
+			padding-left: 30px;
+		}
+		
+		.barGoldLeft {
+			background-color: rgb(172, 145, 86);
+			position: absolute;
+			left: 0px;
+			width: 500px;
+			height: 50px;
+			bottom: 0px;
+		}
+		
+		.txtIfyouLike {
+			font-size: 28px;
+			font-family: MyriadPro-LightCond;
+			color: rgb(255, 255, 255);
+			position: absolute;
+			bottom: 5px;
+			z-index: 9999;
+		}
+		
+		.destProductLeft {
+			position: absolute;
+			bottom: 0px;
+			z-index: 9999;
+		}
+		
+		.tituloLeftDourado {
+			font-family: MyriadPro-SemiboldCond;
+			font-size: 44px;
+			color: rgb(172, 145, 86);
+			line-height: 1.2;
+		}
+		
+		.subTituloLeftBranco {
+			font-family: MyriadPro-LightCond;
+			font-size: 28px;
+			color: #FFFFFF;
+			letter-spacing: 0.02em;
+			font-weight: lighter !important;
+		}
+		
+		.boxProduct {
+			max-width: 284px;
+			height: 284px;
+			background-color: #dec99b;
+			-webkit-box-shadow: 3px 9px 21px -5px rgba(0, 0, 0, 0.63);
+			-moz-box-shadow: 3px 9px 21px -5px rgba(0, 0, 0, 0.63);
+			box-shadow: 3px 9px 21px -5px rgba(0, 0, 0, 0.63);
+		}
+		
+		.boxRosa {
+			width: 100%;
+			max-width: 284px;
+			height: 284px;
+			background-color: #662466;
+			left: 0px;
+			position: absolute;
+		}
+		
+		.titProdutoAtivo {
+			color: #ac9156;
+			font-family: MyriadPro-Cond;
+			font-size: 24px;
+			margin-top: 50px;
+			margin-left: 24px;
+		}
+		
+		.txtProdutoAtivo {
+			color: #FFF;
+			font-size: 19px;
+			font-family: MyriadPro-LightCond;
+			margin-top: 10px;
+			margin-left: 24px;
+		}
+		
+		.barraBoxProduct {
+			background-color: FFF;
+			width: 100%;
+			padding: 10px 0px 0px !important;
+			padding-bottom: 8px;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			color: #310c31;
+			font-family: MyriadPro-Cond;
+			font-size: 24px;
+			text-align: center;
+			font-family: MyriadPro-Cond;
+			font-size: 24px;
+			text-align: center;
+		}
+		
+		.barraBoxProductAtivo {
+			background-color: #ac9156;
+			width: 100%;
+			height: 51px;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			color: #FFF;
+			z-index: 9999999;
+		}
+		
+		.barraBoxProductAtivo p {
+			font-family: MyriadPro-Cond;
+			font-size: 24px;
+			font-size: 24px;
+			position: absolute;
+			left: 75px;
+			top: 10px;
+		}
+		
+		.playVideoBox {
+			position: absolute;
+			left: 170px;
+		}
+		
+		.btnBoxMais {
+			background-image: url(images/pag3/btnMais.png);
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
+		
+		.btnBoxFechar {
+			background-image: url(images/pag3/btnFechar.png);
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			z-index: 999999
+		}
+		
+		.NoDisplay {
+			display: none;
+			max-width: 284px;
+			height: 284px;
+			-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-o-transition: all 1s ease;
+			transition: all 1s ease;
+		}
+		
+		.YesDisplay {
+			display: inherit;
+		}
+		
+		.btnFB {
+			margin-left: 35px;
+		}
+		
+		.btnComprar {
+			margin-left: 12px;
+		}
+		
+		@media (min-width:992px) and (max-width:1199px) {
+			.bg-5-left,
+			.bg-7-right {
+				height: 564px;
+			}
+			.left55 {
+				margin-left: 30px;
+			}
+			.left70 {
+				margin-left: 45px;
+			}
+			.ulleft30 {
+				padding-left: 0px;
+			}
+			.textboxp2 p {
+				font-size: 22px;
+			}
+			.textoPageMeio p {
+				font-size: 27px;
+			}
+			.tituloPageMeio h3 {
+				font-size: 48px;
+			}
+			.txtIfyouLike {
+				font-size: 23px;
+			}
+			.boxProduct,
+			.boxRosa {
+				max-width: 230px;
+				height: 230px;
+			}
+			.tituloLeftDourado {
+				font-size: 36px;
+			}
+			.subTituloLeftBranco {
+				font-size: 22px;
+			}
+			.mtop20 {
+				margin-top: 10px;
+			}
+			.barraBoxProduct {
+				font-size: 20px;
+			}
+			.barraBoxProductAtivo p {
+				font-size: 21px;
+				left: 50px;
+				top: 11px;
+			}
+			.playVideoBox {
+				position: absolute;
+				left: 135px;
+			}
+			.titProdutoAtivo {
+				margin-top: 35px;
+				margin-left: 20px;
+			}
+			.txtProdutoAtivo {
+				font-size: 16px;
+				margin-top: 5px;
+				margin-left: 20px;
+				letter-spacing: 0.02em;
+			}
+			.btnFB {
+				margin-left: 5px;
+			}
+			.btnComprar {
+				margin-left: 0px;
+			}
+		}
+		
+		@media (min-width:768px) and (max-width:991px) {
+			.left55 {
+				margin-left: 20px;
+			}
+			.left70 {
+				margin-left: 35px;
+			}
+			.ulleft30 {
+				padding-left: 45px;
+			}
+		}
+		
+		@media (min-width:320px) and (max-width:767px) {
+			.left55 {
+				margin-left: -5px;
+			}
+			.left70 {
+				margin-left: 10px;
+			}
+			.bg {
+				background-size: 100%;
+				background-repeat: no-repeat;
+				height: 450px;
+				background-size: cover;
+				background-position: -80px 0px;
+			}
+		}
+	</style>
 
-a{text-decoration:none !important;}
-.logo{
-border-radius: 5px;
-background-color: rgb(172, 145, 86);
-top: -13px;
-width: 115px;
-height: 113px;
-}
-.logo img{top: 50px;left: 18px;position:absolute;}
+</head>
 
-.bg-5-left{background-size:100%;background-repeat:no-repeat;height:700px;background-color:#411E1E;}
+<body>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.7&appId=510166559076473";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
-.bg-7-right{background-size:100%;background-repeat:no-repeat;height:700px;background-color:#411E1E; background-image:url(images/pag3/_0008_background.png);}
-
-#chic{background-image:url(images/pag3/_0007_bgLeft.png);}
-
-
-.footer {background-color: rgb(0, 0, 0);left: 0px; padding-top:40px; padding-bottom:40px;}
-
-#btnIniciar{margin-top:10px;}
-
-.left55{margin-left:55px;} .left70{margin-left:70px;}
-
-.tituloPageMeio h3{
-	font-family: MyriadPro-SemiboldCond;
-	color: rgb(172, 145, 86);
-  	font-size: 58.424px;
-  	line-height: 1.2;
-}
-
-.textoPageMeio p {
-  	font-size: 35px;
-  	font-family: MyriadPro-LightCond;
-  	color: rgb(255, 255, 255);
-	margin-top:-15px;
-	letter-spacing:0.03em;
-}
-
-.textboxp2 p{
- 	font-size: 28px;
- 	color: rgb(255, 255, 255);
-  	line-height: 1.2;
-	font-family: MyriadPro-LightCond;
-	letter-spacing:0.03em;
-	}
-	
-.faleComEudora{
-	font-family: MyriadPro-SemiboldCond;
-	font-size:24px;
-	text-transform:uppercase;
-	color:#FFF;
-	margin-top:6px;
-	}
-
-.txtlegal{
-	font-family: MyriadPro-LightCond;
-	font-size:15px;
-	color:#FFF;
-	margin-top: 12px	
-	}
-	
-.mtop10{
-	margin-top:10px;
-	}
-
-.mtop20{
-	margin-top:20px;
-	}
-.mleft70{
-	margin-left:70px;}
-
-.ulleft30{padding-left:30px;}
-
-.barGoldLeft{
-	background-color: rgb(172, 145, 86);
-  	position: absolute;
-  	left: 0px;
-  	width: 500px;
-  	height: 50px;
-	bottom:0px;
-	}
-
-.txtIfyouLike{
-  font-size: 28px;
-  font-family: MyriadPro-LightCond;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  bottom:5px;
-z-index:9999;
-}
-.destProductLeft{
-	position:absolute;
-	bottom:0px;
-	z-index:9999;
-	}
-.tituloLeftDourado{
-font-family: MyriadPro-SemiboldCond;
-  font-size: 44px;
-  color: rgb(172, 145, 86);
-  line-height: 1.2;
-}
-
-.subTituloLeftBranco{
-	font-family: MyriadPro-LightCond;
-	font-size:28px;
-	color:#FFFFFF;
-	letter-spacing:0.02em;
-	font-weight:lighter !important;
-	}
-
-.boxProduct{
-  	max-width: 284px;
-  	height: 284px;
-  	background-color:#dec99b;
-	-webkit-box-shadow: 3px 9px 21px -5px rgba(0,0,0,0.63);
-	-moz-box-shadow: 3px 9px 21px -5px rgba(0,0,0,0.63);
-	box-shadow: 3px 9px 21px -5px rgba(0,0,0,0.63);
-	}
-	
-.boxRosa{
-	width:100%;
-  	max-width: 284px;
-  	height: 284px;
-  	background-color:#662466;
-	left: 0px;
-    position: absolute;
-	}
-	
-.titProdutoAtivo{
-	color:#ac9156;
-	font-family: MyriadPro-Cond;
-	font-size:24px;
-	margin-top:50px;
-	margin-left:24px;
-	}
-	
-.txtProdutoAtivo{
-	color:#FFF;
-	font-size:19px;
-	font-family: MyriadPro-LightCond;
-	margin-top:10px;
-	margin-left:24px;
-	}
-.barraBoxProduct{
- 	background-color: FFF;
- 	width: 100%;
-  	padding:10px 0px 0px !important;
-	padding-bottom:8px;
-  	position:absolute;
-  	bottom:0px;
-  	left:0px;
-	color:#310c31;
-	font-family: MyriadPro-Cond;
-	font-size:24px;
-	text-align:center;
-	font-family: MyriadPro-Cond;
-	font-size:24px;
-	text-align:center;
-	}
-
-.barraBoxProductAtivo{
- 	background-color:#ac9156;
- 	width: 100%;
-  	height:51px;
-  	position:absolute;
-  	bottom:0px;
-  	left:0px;
-	color:#FFF;
-	z-index:9999999;
-	}
-.barraBoxProductAtivo p{
-	font-family: MyriadPro-Cond;
-	font-size:24px;
-	font-size:24px;
-	position:absolute;
-	left:75px;
-	top:10px;
-	}
-.playVideoBox{position:absolute; left:170px;}
-
-.btnBoxMais{
-	background-image:url(images/pag3/btnMais.png);
-	background-repeat:no-repeat;
-	width:30px;
-	height:30px;
-	position:absolute;
-	top:5px;
-	right:5px;
-	}
-.btnBoxFechar{
-	background-image:url(images/pag3/btnFechar.png);
-	background-repeat:no-repeat;
-	width:30px;
-	height:30px;
-	position:absolute;
-	top:5px;
-	right:5px;
-	z-index:999999
-	}
-
-.NoDisplay{
-	display:none;
-	max-width: 284px;
-  	height: 284px;
-	-webkit-transition: all 1s ease;
-  	-moz-transition: all 1s ease;
-  	-o-transition: all 1s ease;
-  	transition: all 1s ease;
-	}
-
-.YesDisplay{
-	display:inherit;
-	}
-.btnFB{margin-left: 35px;}
-
-.btnComprar{margin-left:12px;}
-
-@media (min-width:992px) and (max-width:1199px){
-.bg-5-left, .bg-7-right{height:572px; }
-.left55{margin-left:30px;}
-.left70{margin-left:45px;}
-.ulleft30{padding-left:0px;}
-.textboxp2 p{font-size: 22px;}
-.textoPageMeio p {font-size: 27px;}
-.tituloPageMeio h3{font-size:48px;}
-.txtIfyouLike{font-size: 23px;}
-.boxProduct, .boxRosa{max-width: 230px;height: 230px;}
-.tituloLeftDourado{font-size:36px;}
-.subTituloLeftBranco{font-size:22px;}
-.mtop20{margin-top:10px;}
-.barraBoxProduct{font-size:20px;}
-.barraBoxProductAtivo p{font-size:21px;left:50px;top:11px;}
-.playVideoBox{position:absolute; left:135px;}
-.titProdutoAtivo{margin-top:35px;margin-left:20px;}
-.txtProdutoAtivo{font-size:16px;margin-top:5px;margin-left:20px; letter-spacing:0.02em;}
-.btnFB{margin-left: 5px;}
-.btnComprar{margin-left:0px;}
-}
-
-@media (min-width:768px) and (max-width:991px){
-.left55{margin-left:20px;}
-.left70{margin-left:35px;}
-.ulleft30{padding-left:45px;}
-	}
-
-@media (min-width:320px) and (max-width:767px){
-.left55{margin-left:-5px;}
-.left70{margin-left:10px;}
-.bg{background-size:100%;background-repeat:no-repeat;height:450px;background-size:cover; background-position:-80px 0px;}
-}
-	
-</style>
-
-  </head>
-  
-  <body>
-
-<div class="container">
-	<div class="row">
-    	<div class="col-sm-5 bg-5-left" id="chic">
-      		<div class="col-sm-5 col-sm-offset-5 destProductLeft"><img class="img-responsive center-block" src="images/pag3/_0004_perfumeChic.png" alt=""/></div>
-   	  		<div class="col-xs-12 barGoldLeft">
-        		<div class="col-sm-4 col-sm-offset-1 txtIfyouLike">Se você gosta de:</div>
-      		</div>
-    	</div>
-
-    <div class="col-sm-7 bg-7-right">
-    	<div class="row">
-    		<div class="col-xs-12 text-uppercase text-center tituloLeftDourado" style="margin-top:80px;">fragrâncias recomendadas</div>
-    		<div class="col-xs-12 text-center subTituloLeftBranco">Você também pode gostar de:</div>
-    	</div>
-    	
-        <div class="row" style="margin-top:45px">
-        	<div class="col-sm-5 col-sm-offset-1 boxProduct">
-            	<a href="#">
-            	<div class="btnBoxMais"></div>
-            	<div class="barraBoxProduct"><p>Brisas Tentação Pimenta Rosa</p></div>
-            	<img class="img-responsive center-block mtop20" src="images/pag3/perfumeBrisas.png" alt=""/>
-                </a>
-            </div>
-            <div class="col-sm-5 boxProduct" style="margin-left:15px;">
-            	<div class="NoDisplay"> <!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
-            		<div class="btnBoxMais"></div>
-            		<div class="barraBoxProduct"><p>Lúmis</p></div>
-            		<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt=""/>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 bg-5-left" id="chic">
+				<div class="col-sm-5 col-sm-offset-5 destProductLeft"><img class="img-responsive center-block" src="images/pag3/_0004_perfumeChic.png" alt="" /></div>
+				<div class="col-xs-12 barGoldLeft">
+					<div class="col-sm-4 col-sm-offset-1 txtIfyouLike">Se você gosta de:</div>
 				</div>
-                <div class="YesDisplay"> <!--ativar essa classe para mostrar o overlay-->
-            		<div class="btnBoxFechar"></div>
-           		  	<div class="barraBoxProductAtivo"><p>Veja o vídeo</p><div class="playVideoBox"><img src="images/pag3/playVideo.png" alt=""/></div></div>
-            		<div class="boxRosa">
-                    	<div class="titProdutoAtivo">Lúmis</div>
-                        <div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br>
-							com a mistura de ylang ylang, maçã e <br>
-							baunilha. Você, sempre chique.
+			</div>
+
+			<div class="col-sm-7 bg-7-right">
+				<div class="row">
+					<div class="col-xs-12 text-uppercase text-center tituloLeftDourado" style="margin-top:80px;">fragrâncias recomendadas</div>
+					<div class="col-xs-12 text-center subTituloLeftBranco">Você também pode gostar de:</div>
+				</div>
+
+				<div class="row" style="margin-top:45px">
+					<div class="col-sm-5 col-sm-offset-1 boxProduct">
+						<div class="divProduto YesDisplay">
+							<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
+							<div class="btnBoxMais"></div>
+							<div class="barraBoxProduct">
+								<p>Lúmis</p>
+							</div>
+							<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
 						</div>
-                    </div>
+						<div class="divProdutoDetalhe NoDisplay">
+							<!--ativar essa classe para mostrar o overlay-->
+							<div class="btnBoxFechar"></div>
+							<div class="barraBoxProductAtivo">
+								<p>Veja o vídeo</p>
+								<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
+							</div>
+							<div class="boxRosa">
+								<div class="titProdutoAtivo">Lúmis</div>
+								<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5 boxProduct" style="margin-left:15px;">
+						<div class="divProduto YesDisplay">
+							<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
+							<div class="btnBoxMais"></div>
+							<div class="barraBoxProduct">
+								<p>Lúmis</p>
+							</div>
+							<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
+						</div>
+						<div class="divProdutoDetalhe NoDisplay">
+							<!--ativar essa classe para mostrar o overlay-->
+							<div class="btnBoxFechar"></div>
+							<div class="barraBoxProductAtivo">
+								<p>Veja o vídeo</p>
+								<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
+							</div>
+							<div class="boxRosa">
+								<div class="titProdutoAtivo">Lúmis</div>
+								<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-            </div>
-        </div>
-    	<div class="row" style="margin-top:60px;">
-        	<div class="col-sm-5"><div class="btnFB"><img class="img-responsive" src="images/pag3/_0002_btn_facebook.png" alt=""/></div></div>
-            <div class="col-sm-7"><div class="btnComprar"><img class="img-responsive" src="images/pag3/_0003_btn_comprar.png" alt=""/></div></div>
-        </div>
-    </div>
+				<div class="row" style="margin-top:60px;">
+					<div class="col-sm-5">
+						<div class="btnFB" onclick="compartilhar();">
+							<img class="img-responsive" src="images/pag3/_0002_btn_facebook.png" alt="" />
+						</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="btnComprar"><img class="img-responsive" src="images/pag3/_0003_btn_comprar.png" alt="" /></div>
+					</div>
+				</div>
+			</div>
 
+		</div>
 	</div>
-</div>
-<div class="container footer">
-	<div class="row">
-	  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
-      <div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
-        <div class="col-xs-12 col-sm-4 col-md-2">
-        	<ul class="list-inline mtop10 ulleft30">
-            	<li><img src="images/_0006_facebook.png" alt=""/></li>
-                <li><img src="images/_0007_snapchat.png" alt=""/></li>
-                <li><img src="images/_0008_youtube.png" alt=""/></li>
-                <li><img src="images/_0009_instagram.png" alt=""/></li>
-        	</ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt=""/></div>
+	<div class="container footer">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
+			<div class="col-xs-12 col-sm-4 col-md-2">
+				<ul class="list-inline mtop10 ulleft30">
+					<li><img src="images/_0006_facebook.png" alt="" /></li>
+					<li><img src="images/_0007_snapchat.png" alt="" /></li>
+					<li><img src="images/_0008_youtube.png" alt="" /></li>
+					<li><img src="images/_0009_instagram.png" alt="" /></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
+		</div>
 	</div>
-</div>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<script>
+		$('.boxProduct').mouseover(function() {
+			mouseOverProduto(this);
+		});
+		$('.boxProduct').mouseout(function() {
+			mouseOutProduto(this);
+		});
+		$('.boxProduct').click(function() {
+			clickProduto(this);
+		});
+
+		function mouseOverProduto(field) {
+
+			$(field).children('.divProduto').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProduto').addClass("NoDisplay");
+
+			$(field).children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProdutoDetalhe').addClass("YesDisplay");
+
+		}
+
+		function mouseOutProduto(field) {
+
+			$(field).children('.divProduto').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProduto').addClass("YesDisplay");
+
+			$(field).children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProdutoDetalhe').addClass("NoDisplay");
+
+		}
+
+		function clickProduto(field) {
+			$(field).off("mouseout mouseover");
+		}
+
+		function compartilhar() {
+			// FB.ui({
+			// 	method: 'feed',
+			// 	link: 'www.superaremedia.com.br',
+			// 	name: 'Superare Media 1',
+			// 	description: 'Superare Media 2'
+			// });
+			FB.ui({
+				method: 'share',
+				href: 'http://www.eudora.com.br/'
+			}, function(response) {});
+		}
+	</script>
+</body>
+
 </html>
