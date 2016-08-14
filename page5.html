@@ -1,201 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Eudora</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- checkbox -->
-    <link rel="stylesheet" href="css/stylesheet-image-based.css">
-    <link rel="stylesheet" href="css/style.css">
+  <title>Eudora</title>
 
-<style>
-@font-face {font-family: MyriadPro-SemiboldCond;src: url(myriad-pro/MyriadPro-SemiboldCond.otf);}
-@font-face {font-family: MyriadPro-LightCond;src: url(myriad-pro/MyriadPro-LightCond.otf);}
-@font-face {font-family: MyriadPro-Cond;src: url(myriad-pro/MyriadPro-Cond.otf);}
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- checkbox -->
+  <link rel="stylesheet" href="css/stylesheet-image-based.css">
+  <link rel="stylesheet" href="css/style.css">
 
+  <style>
+      @font-face {
+      font-family: MyriadPro-SemiboldCond;
+      src: url(myriad-pro/MyriadPro-SemiboldCond.otf);
+    }
+    
+    @font-face {
+      font-family: MyriadPro-LightCond;
+      src: url(myriad-pro/MyriadPro-LightCond.otf);
+    }
+    
+    @font-face {
+      font-family: MyriadPro-Cond;
+      src: url(myriad-pro/MyriadPro-Cond.otf);
+    }
+    
+    .logo {
+      border-radius: 5px;
+      background-color: rgb(172, 145, 86);
+      top: -13px;
+      width: 115px;
+      height: 113px;
+    }
+    
+    .logo img {
+      top: 50px;
+      left: 18px;
+      position: absolute;
+    }
+    
+    .bg {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 700px;
+      background-color: #411E1E;
+    }
+    
+    #page2 {
+      background-image: url(images/bg2.jpg);
+    }
+    
+    .footer {
+      background-color: rgb(0, 0, 0);
+      left: 0px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    
+    #btnIniciar {
+      margin-top: 10px;
+    }
+    
+    .left55 {
+      margin-left: 55px;
+    }
+    
+    .left70 {
+      margin-left: 70px;
+    }
+    
+    .tituloPageMeio h3 {
+      font-family: MyriadPro-SemiboldCond;
+      font-size: 58.424px;
+      line-height: 1.2;
+    }
+    
+    .textoPageMeio p {
+      font-size: 35px;
+      font-family: MyriadPro-LightCond;
+      color: rgb(255, 255, 255);
+      margin-top: -15px;
+      letter-spacing: 0.03em;
+    }
+    
+    .textboxp2 p {
+      font-size: 28px;
+      color: rgb(255, 255, 255);
+      line-height: 1.2;
+      font-family: MyriadPro-LightCond;
+      letter-spacing: 0.03em;
+    }
+    
+    .faleComEudora {
+      font-family: MyriadPro-SemiboldCond;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #FFF;
+      margin-top: 6px;
+    }
+    
+    .txtlegal {
+      font-family: MyriadPro-LightCond;
+      font-size: 15px;
+      color: #FFF;
+      margin-top: 12px
+    }
+    
+    .mtop10 {
+      margin-top: 10px;
+    }
+    
+    .mleft70 {
+      margin-left: 70px;
+    }
+    
+    .ulleft30 {
+      padding-left: 30px;
+    }
+    
+    @media (min-width:992px) and (max-width:1199px) {
+      .bg {
+        height: 572px;
+      }
+      .left55 {
+        margin-left: 30px;
+      }
+      .left70 {
+        margin-left: 45px;
+      }
+      .ulleft30 {
+        padding-left: 0px;
+      }
+      .textboxp2 p {
+        font-size: 22px;
+      }
+      .textoPageMeio p {
+        font-size: 27px;
+      }
+      .tituloPageMeio h3 {
+        font-size: 48px;
+      }
+      .font-30 {
+        font-size: 26px!important;
+      }
+      .font-55 {
+        font-size: 48px!important;
+      }
+      @media (min-width:768px) and (max-width:991px) {
+        .left55 {
+          margin-left: 20px;
+        }
+        .left70 {
+          margin-left: 35px;
+        }
+        .ulleft30 {
+          padding-left: 45px;
+        }
+      }
+      @media (min-width:320px) and (max-width:767px) {
+        .left55 {
+          margin-left: -5px;
+        }
+        .left70 {
+          margin-left: 10px;
+        }
+        .bg {
+          background-size: 100%;
+          background-repeat: no-repeat;
+          height: 450px;
+          background-size: cover;
+          background-position: -80px 0px;
+        }
+      }
+  </style>
 
-.logo{
-  border-radius: 5px;
-  background-color: rgb(172, 145, 86);
-  top: -13px;
-  width: 115px;
-  height: 113px;
-  }
-.logo img{top: 50px;left: 18px;position:absolute;}
+</head>
 
-.bg{background-size:100%;background-repeat:no-repeat;height:700px;background-color:#411E1E;}
+<body>
 
-#page2{background-image:url(images/bg2.jpg);}
-
-.footer {background-color: rgb(0, 0, 0);left: 0px; padding-top:40px; padding-bottom:40px;}
-
-#btnIniciar{margin-top:10px;}
-
-.left55{margin-left:55px;} .left70{margin-left:70px;}
-
-.tituloPageMeio h3{
-	font-family: MyriadPro-SemiboldCond;
-  	font-size: 58.424px;
-  	line-height: 1.2;
-}
-
-
-.textoPageMeio p {
-  	font-size: 35px;
-  	font-family: MyriadPro-LightCond;
-  	color: rgb(255, 255, 255);
-	margin-top:-15px;
-	letter-spacing:0.03em;
-}
-
-.textboxp2 p{
- 	font-size: 28px;
- 	color: rgb(255, 255, 255);
-  	line-height: 1.2;
-	font-family: MyriadPro-LightCond;
-	letter-spacing:0.03em;
-	}
-	
-.faleComEudora{
-	font-family: MyriadPro-SemiboldCond;
-	font-size:24px;
-	text-transform:uppercase;
-	color:#FFF;
-	margin-top:6px;
-	}
-
-.txtlegal{
-	font-family: MyriadPro-LightCond;
-	font-size:15px;
-	color:#FFF;
-	margin-top: 12px	
-	}
-	
-.mtop10{
-	margin-top:10px;
-	}
-
-.mleft70{
-	margin-left:70px;}
-
-.ulleft30{padding-left:30px;}
-
-@media (min-width:992px) and (max-width:1199px){
-.bg{height:572px; }
-.left55{margin-left:30px;}
-.left70{margin-left:45px;}
-.ulleft30{padding-left:0px;}
-.textboxp2 p{font-size: 22px;}
-.textoPageMeio p {font-size: 27px;}
-.tituloPageMeio h3{font-size:48px;}
-.font-30{font-size: 26px!important;}
-.font-55{font-size:48px!important;}
-
-@media (min-width:768px) and (max-width:991px){
-.left55{margin-left:20px;}
-.left70{margin-left:35px;}
-.ulleft30{padding-left:45px;}
-	}
-
-@media (min-width:320px) and (max-width:767px){
-.left55{margin-left:-5px;}
-.left70{margin-left:10px;}
-.bg{background-size:100%;background-repeat:no-repeat;height:450px;background-size:cover; background-position:-80px 0px;}
-
-
-}
-	
-</style>
-
-  </head>
-  
-  <body>
-
-<div class="container bg" id="page2">
-	<div class="row"><div class="col-xs-2 logo left70"><img src="images/_0000_logoEudora.png" alt=""/></div></div>
+  <div class="container bg" id="page2">
     <div class="row">
-    	<div class="col-xs-12 col-md-8 col-md-offset-2" style="padding:0 0 20px 0;">
-          <div class="col-md-3 col-lg-4 pull-left" style="margin-right:0;padding-right:0">
-            <img src="images/slot_2.png" class="pull-right bullet-numero" alt="Primeiro passo" style="padding-right:15px;">
-          </div>
-        	 <div class="col-md-8" style="margin-left:0;padding-left:0">
-        	   <span class="text-center MyriadSemiBold font-55 branca upper" >caminho olfativo</span>
-             <span class="dourada MyriadLight font-30" style="display:block;">Escolha o tipo de fragrância que você mais se identifica.</span>
-          </div>
+      <div class="col-xs-2 logo left70"><img src="images/_0000_logoEudora.png" alt="" /></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2" style="padding:0 0 20px 0;">
+        <div class="col-md-3 col-lg-4 pull-left" style="margin-right:0;padding-right:0">
+          <img src="images/slot_2.png" class="pull-right bullet-numero" alt="Primeiro passo" style="padding-right:15px;">
+        </div>
+        <div class="col-md-8" style="margin-left:0;padding-left:0">
+          <span class="text-center MyriadSemiBold font-55 branca upper">caminho olfativo</span>
+          <span class="dourada MyriadLight font-30" style="display:block;">Escolha o tipo de fragrância que você mais se identifica.</span>
+        </div>
       </div>
 
     </div>
     <div class="row">
-    	<div class="col-sm-10 col-sm-offset-1 margin-topbottom-5">
-        	<div class="col-sm-4 padding-left-right-10">
-            <a href="#">
-              <img class="center-block img-responsive blocks" src="images/olfativo/fougere.png" alt=""/>
-            </a>
-          </div>
-        	<div class="col-sm-4 padding-left-right-10">
-            <a href="#">
-              <img class="center-block img-responsive blocks" src="images/olfativo/floral.png" alt=""/>
-            </a>
-          </div>
-          <div class="col-sm-4 padding-left-right-10">
-            <a href="#">
-              <img class="center-block img-responsive blocks" src="images/olfativo/frutal.png" alt=""/>
-            </a>
-          </div>
+      <div class="col-sm-10 col-sm-offset-1 margin-topbottom-5">
+        <div class="col-sm-4 padding-left-right-10">
+          <a href="javascript:void(0);" onclick="redirecionarPagina('fougere')">
+            <img class="center-block img-responsive blocks" src="images/olfativo/fougere.png" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4 padding-left-right-10">
+          <a href="javascript:void(0);" onclick="redirecionarPagina('floral')">
+            <img class="center-block img-responsive blocks" src="images/olfativo/floral.png" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4 padding-left-right-10">
+          <a href="javascript:void(0);" onclick="redirecionarPagina('frutal')">
+            <img class="center-block img-responsive blocks" src="images/olfativo/frutal.png" alt="" />
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1 margin-topbottom-5">
-          <div class="col-sm-4 padding-left-right-10">
-            <a href="#">
-              <img class="center-block img-responsive blocks" src="images/olfativo/amadeirado.png" alt=""/>
-            </a>
-          </div>
-          <div class="col-sm-4 padding-left-right-10">
-            <a href="#">
-              <img class="center-block img-responsive blocks" src="images/olfativo/adocicado.png" alt=""/>
-            </a>
-          </div>
-          <div class="col-sm-4 padding-left-right-10">
-            <a href="#">
-              <img class="center-block img-responsive blocks" src="images/olfativo/chypre.png" alt=""/>
-            </a>
-          </div>
-      </div>
-    </div>
-    
-     <div class="row">
-    	<div class="col-sm-6 col-sm-offset-3 margin-topbottom-20">
-        <p class="branca MyriadLight font-16 text-center upper">Imagens meramente ilustrativas</p>    
-      </div>
-    </div>
-    
-    
-</div>
-<div class="container footer">
-	<div class="row">
-	  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
-      <div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
-        <div class="col-xs-12 col-sm-4 col-md-2">
-        	<ul class="list-inline mtop10 ulleft30">
-            	<li><img src="images/_0006_facebook.png" alt=""/></li>
-                <li><img src="images/_0007_snapchat.png" alt=""/></li>
-                <li><img src="images/_0008_youtube.png" alt=""/></li>
-                <li><img src="images/_0009_instagram.png" alt=""/></li>
-        	</ul>
+        <div class="col-sm-4 padding-left-right-10">
+          <a href="javascript:void(0);" onclick="redirecionarPagina('amadeirado')">
+            <img class="center-block img-responsive blocks" src="images/olfativo/amadeirado.png" alt="" />
+          </a>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt=""/></div>
-	</div>
-</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+        <div class="col-sm-4 padding-left-right-10">
+          <a href="javascript:void(0);" onclick="redirecionarPagina('adocicado')">
+            <img class="center-block img-responsive blocks" src="images/olfativo/adocicado.png" alt="" />
+          </a>
+        </div>
+        <div class="col-sm-4 padding-left-right-10">
+          <a href="javascript:void(0);" onclick="redirecionarPagina('chypre')">
+            <img class="center-block img-responsive blocks" src="images/olfativo/chypre.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 margin-topbottom-20">
+        <p class="branca MyriadLight font-16 text-center upper">Imagens meramente ilustrativas</p>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="container footer">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
+      <div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <ul class="list-inline mtop10 ulleft30">
+          <li><img src="images/_0006_facebook.png" alt="" /></li>
+          <li><img src="images/_0007_snapchat.png" alt="" /></li>
+          <li><img src="images/_0008_youtube.png" alt="" /></li>
+          <li><img src="images/_0009_instagram.png" alt="" /></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $.urlParam = function(name) {
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (results == null) {
+        return null;
+      } else {
+        return results[1] || 0;
+      }
+    }
+
+    function redirecionarPagina(caminhoOlfativo) {
+      window.location = 'page6.html?intensidade=' + $.urlParam('intensidade') + '&caminhoOlfativo=' + caminhoOlfativo;
+    }
+  </script>
+</body>
+
 </html>
