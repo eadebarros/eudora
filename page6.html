@@ -414,7 +414,9 @@
 			<div class="col-sm-7 bg-7-right">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<img src="images/refazer_teste.png" class="img-responsive pull-right refazer" alt="Refazer o teste" />
+						<a href="index.html">
+							<img src="images/refazer_teste.png" class="img-responsive pull-right refazer" alt="Refazer o teste" />
+						</a>
 					</div>
 					<div class="col-xs-12 text-uppercase text-center tituloLeftDourado">fragrâncias recomendadas</div>
 					<div class="col-xs-12 text-center subTituloLeftBranco">Você também pode gostar de:</div>
@@ -427,13 +429,11 @@
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1"></li>
 					</ol>
-
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
 							<div class="col-sm-5 col-sm-offset-1 boxProduct">
 								<div class="YesDisplay">
-									<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 									<div class="btnBoxMais"></div>
 									<div class="barraBoxProduct">
 										<p>Lúmis</p>
@@ -441,7 +441,6 @@
 									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
 								</div>
 								<div class="NoDisplay">
-									<!--ativar essa classe para mostrar o overlay-->
 									<div class="btnBoxFechar"></div>
 									<div class="barraBoxProductAtivo">
 										<p>Veja o vídeo</p>
@@ -456,7 +455,6 @@
 							</div>
 							<div class="col-sm-5 boxProduct" style="margin-left:15px;">
 								<div class="NoDisplay">
-									<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 									<div class="btnBoxMais"></div>
 									<div class="barraBoxProduct">
 										<p>Lúmis</p>
@@ -464,7 +462,6 @@
 									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
 								</div>
 								<div class="YesDisplay">
-									<!--ativar essa classe para mostrar o overlay-->
 									<div class="btnBoxFechar"></div>
 									<div class="barraBoxProductAtivo">
 										<p>Veja o vídeo</p>
@@ -481,7 +478,6 @@
 						<div class="item">
 							<div class="col-sm-5 col-sm-offset-1 boxProduct">
 								<div class="YesDisplay">
-									<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 									<div class="btnBoxMais"></div>
 									<div class="barraBoxProduct">
 										<p>Lúmis</p>
@@ -489,7 +485,6 @@
 									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
 								</div>
 								<div class="NoDisplay">
-									<!--ativar essa classe para mostrar o overlay-->
 									<div class="btnBoxFechar"></div>
 									<div class="barraBoxProductAtivo">
 										<p>Veja o vídeo</p>
@@ -504,7 +499,6 @@
 							</div>
 							<div class="col-sm-5 boxProduct" style="margin-left:15px;">
 								<div class="NoDisplay">
-									<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 									<div class="btnBoxMais"></div>
 									<div class="barraBoxProduct">
 										<p>Lúmis</p>
@@ -512,7 +506,6 @@
 									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
 								</div>
 								<div class="YesDisplay">
-									<!--ativar essa classe para mostrar o overlay-->
 									<div class="btnBoxFechar"></div>
 									<div class="barraBoxProductAtivo">
 										<p>Veja o vídeo</p>
@@ -573,6 +566,61 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script>
+		function getParamURL(name) {
+			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			if (results == null) {
+				return null;
+			} else {
+				return results[1] || 0;
+			}
+		}
+
+		function buscarDados() {
+			var xmlhttp = new XMLHttpRequest();
+			var url = "https://www.googleapis.com/fusiontables/v2/query?sql=";
+			url += "SELECT * FROM 1ZP0ucXAvz9gk3hTxCHHOi4eXHTiAO-yy9aCL0U_K";
+			url += " WHERE caminho_olfativo='" + getParamURL('caminho_olfativo') + "' AND intensidade='" + getParamURL('intensidade') + "'"
+			url += "&key=AIzaSyChxA1OR3NVH_eNB683_tOpdwxBXa_PHUM";
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var myArr = JSON.parse(xmlhttp.responseText);
+					processarRetorno(myArr);
+				}
+			};
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+		}
+
+		function processarRetorno(json) {
+
+			if (!(json && json.rows && json.columns)) {
+				alert('Dados não encontratos');
+			}
+
+			var index_genero = json.columns.indexOf('genero');
+			var index_caminho_olfativo = json.columns.indexOf('caminho_olfativo');
+			var index_intensidade = json.columns.indexOf('intensidade');
+			var index_nome = json.columns.indexOf('nome');
+
+			var produtos = [];
+
+			for (var i = 0; i < json.rows.length; i++) {
+				var element = json.rows[i];
+				produtos.push({
+					genero: element[index_genero],
+					caminho_olfativo: element[index_caminho_olfativo],
+					intensidade: element[index_intensidade],
+					nome: element[index_nome]
+				});
+			}
+
+			console.log(produtos);
+		}
+
+		buscarDados();
+	</script>
 </body>
 
 </html>
