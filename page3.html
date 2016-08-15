@@ -38,23 +38,24 @@
 			text-decoration: none !important;
 		}
 		
-		.absolute{
-			position:absolute;
-			}
+		.absolute {
+			position: absolute;
+		}
+		
 		.logo {
 			border-radius: 5px;
 			background-color: rgb(172, 145, 86);
 			top: -13px;
 			width: 115px;
 			height: 113px;
-			z-index:99999999;
+			z-index: 99999999;
 		}
 		
 		.logo img {
 			top: 50px;
 			left: 18px;
 			position: absolute;
-			z-index:999999999;
+			z-index: 999999999;
 		}
 		
 		.bg-5-left {
@@ -73,7 +74,7 @@
 		}
 		
 		#chic {
-			background-image: url(images/pag3/_0007_bgLeft.png);
+			/*background-image: url(images/pag3/_0007_bgLeft.png);*/
 		}
 		
 		.footer {
@@ -98,6 +99,7 @@
 		.mleft50 {
 			margin-left: 50px !important;
 		}
+		
 		.tituloPageMeio h3 {
 			font-family: MyriadPro-SemiboldCond;
 			color: rgb(172, 145, 86);
@@ -144,22 +146,25 @@
 			margin-top: 20px;
 		}
 		
-		.mtop80{
-			margin-top:80px;
-			}
-			
-		.mtop45{
-			margin-top:45px;
-			}
-			
-		.mtop60{
-			margin-top:60px;
-			}
-			
+		.mtop80 {
+			margin-top: 80px;
+		}
+		
+		.mtop45 {
+			margin-top: 45px;
+		}
+		
+		.mtop60 {
+			margin-top: 60px;
+		}
+		
 		.mleft70 {
 			margin-left: 70px;
 		}
-		.ml15{margin-left:15px !important;}
+		
+		.ml15 {
+			margin-left: 15px !important;
+		}
 		
 		.ulleft30 {
 			padding-left: 30px;
@@ -319,8 +324,7 @@
 			margin-left: 10px;
 		}
 		
-		
-				@media (min-width:320px) and (max-width:767px) {
+		@media (min-width:320px) and (max-width:767px) {
 			.left55 {
 				margin-left: -5px;
 			}
@@ -334,49 +338,49 @@
 				background-size: cover;
 				background-position: -80px 0px;
 			}
-			.mleft50{margin-left:80px !important;}
-			
+			.mleft50 {
+				margin-left: 80px !important;
+			}
 			.bg-7-right {
 				height: 980px;
-				background-image:url(images/bgMobRoxo.png);
+				background-image: url(images/bgMobRoxo.png);
 			}
 			.bg-5-left {
-    			background-size: 100%;
-    			background-repeat: no-repeat;
-    			height: 450px !important;
-    			background-color: #411E1E;}
-			
-			.destProductLeft {margin-left:150px;}
-			
-			.mtop80{
-			margin-top:30px;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				height: 450px !important;
+				background-color: #411E1E;
 			}
-			
-			.mtop45{
-			margin-top:20px;
+			.destProductLeft {
+				margin-left: 150px;
 			}
-			
-			.mtop60{
-			margin-top:35px;
+			.mtop80 {
+				margin-top: 30px;
 			}
-			
-			.ml15{margin-left:0px;}
-			
+			.mtop45 {
+				margin-top: 20px;
+			}
+			.mtop60 {
+				margin-top: 35px;
+			}
+			.ml15 {
+				margin-left: 0px;
+			}
 			.boxProduct {
-				width:280px !important;
-				margin-left:50% !important;
-				left:-140px;
-				position:relative !important;
-				margin-top:20px;
-				}
-			.btnFB {margin-left:0px;}
-			
+				width: 280px !important;
+				margin-left: 50% !important;
+				left: -140px;
+				position: relative !important;
+				margin-top: 20px;
+			}
+			.btnFB {
+				margin-left: 0px;
+			}
 			.btnComprar {
-			margin-top: 15px;
+				margin-top: 15px;
+			}
 		}
 		
-			
-		}
 		@media (min-width:992px) and (max-width:1199px) {
 			.bg-5-left,
 			.bg-7-right {
@@ -458,8 +462,6 @@
 				padding-left: 45px;
 			}
 		}
-		
-
 	</style>
 
 </head>
@@ -479,13 +481,17 @@
 	</script>
 
 	<div class="container">
-    
-    	<div class="row absolute" >
-			<div class="col-xs-12 col-sm-2 logo left70"><img class="center-block" src="images/_0000_logoEudora.png" alt="" /></div>
+
+		<div class="row absolute">
+			<div class="col-xs-12 col-sm-2 logo left70">
+				<img class="center-block" src="images/_0000_logoEudora.png" alt="" />
+			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-5 bg-5-left" id="chic">
-				<div class="col-xs-6 col-sm-5 col-sm-offset-5 destProductLeft"><img class="img-responsive center-block" src="images/pag3/_0004_perfumeChic.png" alt="" /></div>
+			<div class="col-sm-5 bg-5-left imagem_modelo" id="chic">
+				<div class="col-xs-6 col-sm-5 col-sm-offset-5 destProductLeft">
+					<img id="imagem_produto150" class="img-responsive center-block" alt="" />
+				</div>
 				<div class="col-xs-12 barGoldLeft">
 					<div class="col-sm-4 col-sm-offset-1 txtIfyouLike">Se você gosta de:</div>
 				</div>
@@ -503,20 +509,28 @@
 							<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 							<div class="btnBoxMais"></div>
 							<div class="barraBoxProduct">
-								<p>Lúmis</p>
+								<p class="nomeProduto1"></p>
 							</div>
-							<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
+							<img id="imagemProduto1" class="img-responsive center-block mtop20" alt="" />
 						</div>
 						<div class="divProdutoDetalhe NoDisplay">
 							<!--ativar essa classe para mostrar o overlay-->
 							<div class="btnBoxFechar"></div>
 							<div class="barraBoxProductAtivo">
 								<p>Veja o vídeo</p>
-								<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
+								<div class="playVideoBox">
+									<a id="linkVideo1" href="#">
+										<img src="images/pag3/playVideo.png" alt="" />
+									</a>
+								</div>
 							</div>
 							<div class="boxRosa">
-								<div class="titProdutoAtivo">Lúmis</div>
-								<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
+								<div class="titProdutoAtivo">
+									<p class="nomeProduto1"></p>
+								</div>
+								<div class="txtProdutoAtivo">
+									<!--Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.-->
+									<span id="descricaoProduto1"></span>
 								</div>
 							</div>
 						</div>
@@ -526,20 +540,28 @@
 							<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 							<div class="btnBoxMais"></div>
 							<div class="barraBoxProduct">
-								<p>Lúmis</p>
+								<p class="nomeProduto2"></p>
 							</div>
-							<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
+							<img id="imagemProduto2" class="img-responsive center-block mtop20" alt="" />
 						</div>
 						<div class="divProdutoDetalhe NoDisplay">
 							<!--ativar essa classe para mostrar o overlay-->
 							<div class="btnBoxFechar"></div>
 							<div class="barraBoxProductAtivo">
 								<p>Veja o vídeo</p>
-								<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
+								<div class="playVideoBox">
+									<a id="linkVideo2" href="#">
+										<img src="images/pag3/playVideo.png" alt="" />
+									</a>
+								</div>
 							</div>
 							<div class="boxRosa">
-								<div class="titProdutoAtivo">Lúmis</div>
-								<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
+								<div class="titProdutoAtivo">
+									<p class="nomeProduto2"></p>
+								</div>
+								<div class="txtProdutoAtivo">
+									<!--Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.-->
+									<span id="descricaoProduto2"></span>
 								</div>
 							</div>
 						</div>
@@ -559,7 +581,7 @@
 
 		</div>
 	</div>
-<div class="container footer">
+	<div class="container footer">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
@@ -616,16 +638,98 @@
 		}
 
 		function compartilhar() {
-			// FB.ui({
-			// 	method: 'feed',
-			// 	link: 'www.superaremedia.com.br',
-			// 	name: 'Superare Media 1',
-			// 	description: 'Superare Media 2'
-			// });
 			FB.ui({
 				method: 'share',
 				href: 'http://www.eudora.com.br/'
 			}, function(response) {});
+		}
+
+		function getParamURL(name) {
+			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			if (results == null) {
+				return null;
+			} else {
+				return results[1] || 0;
+			}
+		}
+
+		function buscarProduto() {
+			var xmlhttp = new XMLHttpRequest();
+			var url = "https://www.googleapis.com/fusiontables/v2/query?sql=";
+			url += "SELECT * FROM 1ZP0ucXAvz9gk3hTxCHHOi4eXHTiAO-yy9aCL0U_K";
+			url += " WHERE produto='" + getParamURL('produto') + "'"
+			url += "&key=AIzaSyChxA1OR3NVH_eNB683_tOpdwxBXa_PHUM";
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var json = JSON.parse(xmlhttp.responseText);
+					processarRetornoProduto(json);
+				}
+			};
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+		}
+
+		function processarRetornoProduto(json) {
+
+			if (!(json && json.rows && json.columns)) {
+				alert('Dados não encontratos');
+			}
+
+			var element = json.rows[0];
+
+			var produto = element[json.columns.indexOf('produto')];
+
+			var imagem_produto = element[json.columns.indexOf('imagem_produto_a150_l150')];
+			var imagem_modelo = element[json.columns.indexOf('imagem_modelo_a750_l500')];
+
+			$('#imagem_produto150').attr("src", imagem_produto);
+			$('.imagem_modelo').css('background-image', 'url(' + imagem_modelo + ')');
+
+			var recomendacao1 = element[json.columns.indexOf('recomendacao1')];
+			buscarRecomendacaoProduto(recomendacao1, 1);
+			var recomendacao2 = element[json.columns.indexOf('recomendacao2')];
+			buscarRecomendacaoProduto(recomendacao2, 2);
+		}
+
+		buscarProduto();
+
+
+		function buscarRecomendacaoProduto(produto, indice) {
+			var xmlhttp = new XMLHttpRequest();
+			var url = "https://www.googleapis.com/fusiontables/v2/query?sql=";
+			url += "SELECT * FROM 1ZP0ucXAvz9gk3hTxCHHOi4eXHTiAO-yy9aCL0U_K";
+			url += " WHERE produto='" + produto + "'"
+			url += "&key=AIzaSyChxA1OR3NVH_eNB683_tOpdwxBXa_PHUM";
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var json = JSON.parse(xmlhttp.responseText);
+					processarRetornoRecomendacaoProduto(json, indice);
+				}
+			};
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+		}
+
+		function processarRetornoRecomendacaoProduto(json, indice) {
+
+			if (!(json && json.rows && json.columns)) {
+				alert('Dados não encontratos');
+			}
+
+			var element = json.rows[0];
+
+			var produto = element[json.columns.indexOf('produto')];
+			var imagem_produto_l250 = element[json.columns.indexOf('imagem_produto_l250')];
+			var link_video = element[json.columns.indexOf('link_video')];
+			var descricao_produto = element[json.columns.indexOf('descricao_produto')];
+
+			$('.nomeProduto' + indice).text(produto);
+			$('#imagemProduto' + indice).attr("src", imagem_produto_l250);
+			$('#linkVideo' + indice).attr("href", link_video);
+			$('#descricaoProduto' + indice).text(descricao_produto);
+
 		}
 	</script>
 </body>
