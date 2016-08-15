@@ -38,32 +38,37 @@
 			text-decoration: none !important;
 		}
 		
+		.absolute{
+			position:absolute;
+			}
 		.logo {
 			border-radius: 5px;
 			background-color: rgb(172, 145, 86);
 			top: -13px;
 			width: 115px;
 			height: 113px;
+			z-index:99999999;
 		}
 		
 		.logo img {
 			top: 50px;
 			left: 18px;
 			position: absolute;
+			z-index:999999999;
 		}
 		
 		.bg-5-left {
 			background-size: 100%;
 			background-repeat: no-repeat;
-			height: 682px;
+			height: 700px;
 			background-color: #411E1E;
 		}
 		
 		.bg-7-right {
 			background-size: 100%;
 			background-repeat: no-repeat;
-			height: 682px;
-			background-color: #411E1E;
+			height: 700px;
+			background-color: #4D134D;
 			background-image: url(images/pag3/_0008_background.png);
 		}
 		
@@ -90,6 +95,9 @@
 			margin-left: 70px;
 		}
 		
+		.mleft50 {
+			margin-left: 50px !important;
+		}
 		.tituloPageMeio h3 {
 			font-family: MyriadPro-SemiboldCond;
 			color: rgb(172, 145, 86);
@@ -136,9 +144,22 @@
 			margin-top: 20px;
 		}
 		
+		.mtop80{
+			margin-top:80px;
+			}
+			
+		.mtop45{
+			margin-top:45px;
+			}
+			
+		.mtop60{
+			margin-top:60px;
+			}
+			
 		.mleft70 {
 			margin-left: 70px;
 		}
+		.ml15{margin-left:15px !important;}
 		
 		.ulleft30 {
 			padding-left: 30px;
@@ -284,10 +305,10 @@
 			display: none;
 			max-width: 284px;
 			height: 284px;
-			-webkit-transition: all 1s ease;
-			-moz-transition: all 1s ease;
-			-o-transition: all 1s ease;
-			transition: all 1s ease;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-o-transition: all 2s ease;
+			transition: all 2s ease;
 		}
 		
 		.YesDisplay {
@@ -295,17 +316,71 @@
 		}
 		
 		.btnFB {
-			margin-left: 35px;
+			margin-left: 10px;
 		}
 		
-		.btnComprar {
-			margin-left: 12px;
+		
+				@media (min-width:320px) and (max-width:767px) {
+			.left55 {
+				margin-left: -5px;
+			}
+			.left70 {
+				margin-left: 10px;
+			}
+			.bg {
+				background-size: 100%;
+				background-repeat: no-repeat;
+				height: 450px;
+				background-size: cover;
+				background-position: -80px 0px;
+			}
+			.mleft50{margin-left:80px !important;}
+			
+			.bg-7-right {
+				height: 980px;
+				background-image:url(images/bgMobRoxo.png);
+			}
+			.bg-5-left {
+    			background-size: 100%;
+    			background-repeat: no-repeat;
+    			height: 450px !important;
+    			background-color: #411E1E;}
+			
+			.destProductLeft {margin-left:150px;}
+			
+			.mtop80{
+			margin-top:30px;
+			}
+			
+			.mtop45{
+			margin-top:20px;
+			}
+			
+			.mtop60{
+			margin-top:35px;
+			}
+			
+			.ml15{margin-left:0px;}
+			
+			.boxProduct {
+				width:280px !important;
+				margin-left:50% !important;
+				left:-140px;
+				position:relative !important;
+				margin-top:20px;
+				}
+			.btnFB {margin-left:0px;}
+			
+			.btnComprar {
+			margin-top: 15px;
 		}
 		
+			
+		}
 		@media (min-width:992px) and (max-width:1199px) {
 			.bg-5-left,
 			.bg-7-right {
-				height: 564px;
+				height: 572px;
 			}
 			.left55 {
 				margin-left: 30px;
@@ -384,21 +459,7 @@
 			}
 		}
 		
-		@media (min-width:320px) and (max-width:767px) {
-			.left55 {
-				margin-left: -5px;
-			}
-			.left70 {
-				margin-left: 10px;
-			}
-			.bg {
-				background-size: 100%;
-				background-repeat: no-repeat;
-				height: 450px;
-				background-size: cover;
-				background-position: -80px 0px;
-			}
-		}
+
 	</style>
 
 </head>
@@ -418,9 +479,13 @@
 	</script>
 
 	<div class="container">
+    
+    	<div class="row absolute" >
+			<div class="col-xs-12 col-sm-2 logo left70"><img class="center-block" src="images/_0000_logoEudora.png" alt="" /></div>
+		</div>
 		<div class="row">
 			<div class="col-sm-5 bg-5-left" id="chic">
-				<div class="col-sm-5 col-sm-offset-5 destProductLeft"><img class="img-responsive center-block" src="images/pag3/_0004_perfumeChic.png" alt="" /></div>
+				<div class="col-xs-6 col-sm-5 col-sm-offset-5 destProductLeft"><img class="img-responsive center-block" src="images/pag3/_0004_perfumeChic.png" alt="" /></div>
 				<div class="col-xs-12 barGoldLeft">
 					<div class="col-sm-4 col-sm-offset-1 txtIfyouLike">Se você gosta de:</div>
 				</div>
@@ -428,12 +493,12 @@
 
 			<div class="col-sm-7 bg-7-right">
 				<div class="row">
-					<div class="col-xs-12 text-uppercase text-center tituloLeftDourado" style="margin-top:80px;">fragrâncias recomendadas</div>
+					<div class="col-xs-12 text-uppercase text-center tituloLeftDourado mtop80">fragrâncias recomendadas</div>
 					<div class="col-xs-12 text-center subTituloLeftBranco">Você também pode gostar de:</div>
 				</div>
 
-				<div class="row" style="margin-top:45px">
-					<div class="col-sm-5 col-sm-offset-1 boxProduct">
+				<div class="row mtop45">
+					<div class="col-xs-12 col-sm-5 col-sm-offset-1 boxProduct">
 						<div class="divProduto YesDisplay">
 							<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 							<div class="btnBoxMais"></div>
@@ -456,7 +521,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-5 boxProduct" style="margin-left:15px;">
+					<div class="col-xs-12 col-sm-5 boxProduct ml15">
 						<div class="divProduto YesDisplay">
 							<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 							<div class="btnBoxMais"></div>
@@ -480,33 +545,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="row" style="margin-top:60px;">
-					<div class="col-sm-5">
+				<div class="row mtop60">
+					<div class="col-xs-12 col-sm-5">
 						<div class="btnFB" onclick="compartilhar();">
-							<img class="img-responsive" src="images/pag3/_0002_btn_facebook.png" alt="" />
+							<img class="img-responsive center-block" src="images/pag3/_0002_btn_facebook.png" alt="" />
 						</div>
 					</div>
-					<div class="col-sm-7">
-						<div class="btnComprar"><img class="img-responsive" src="images/pag3/_0003_btn_comprar.png" alt="" /></div>
+					<div class="col-xs-12 col-sm-7">
+						<div class="btnComprar"><img class="img-responsive center-block" src="images/pag3/_0003_btn_comprar.png" alt="" /></div>
 					</div>
 				</div>
 			</div>
 
 		</div>
 	</div>
-	<div class="container footer">
+<div class="container footer">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
-			<div class="col-xs-12 col-sm-4 col-md-2">
-				<ul class="list-inline mtop10 ulleft30">
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
+			<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-md-2 col-lg-2  mleft50">
+				<ul class="list-inline mtop10">
 					<li><img src="images/_0006_facebook.png" alt="" /></li>
 					<li><img src="images/_0007_snapchat.png" alt="" /></li>
 					<li><img src="images/_0008_youtube.png" alt="" /></li>
 					<li><img src="images/_0009_instagram.png" alt="" /></li>
 				</ul>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
+			<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
 		</div>
 	</div>
 
