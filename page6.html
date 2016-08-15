@@ -343,7 +343,9 @@
 				background-position: -80px 0px;
 			}
 			.mleft50 {
-				margin-left: 80px !important;
+				width: 180px;
+				margin-left: 50%!important;
+				left: -80px;
 			}
 			.bg-7-right {
 				height: 980px;
@@ -612,6 +614,21 @@
 
 		</div>
 	</div>
+	<!--<div class="container footer">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
+			<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-md-2 col-lg-2  mleft50">
+				<ul class="list-inline mtop10">
+					<li><img src="images/_0006_facebook.png" alt="" /></li>
+					<li><img src="images/_0007_snapchat.png" alt="" /></li>
+					<li><img src="images/_0008_youtube.png" alt="" /></li>
+					<li><img src="images/_0009_instagram.png" alt="" /></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
+		</div>
+	</div>-->
 	<div class="container footer">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
@@ -721,6 +738,8 @@
 			}
 
 			$('.carousel-inner').append(itemHtmlAppend);
+
+			addClassListenners();
 		}
 
 		function addClassListenners() {

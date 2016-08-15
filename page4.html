@@ -114,7 +114,10 @@
     .mtop10 {
       margin-top: 10px;
     }
-    
+    .mleft50 {
+			margin-left: 50px !important;
+		}
+	
     .mleft70 {
       margin-left: 70px;
     }
@@ -122,7 +125,37 @@
     .ulleft30 {
       padding-left: 30px;
     }
-    
+    @media (min-width:320px) and (max-width:767px) {
+        .left55 {
+          margin-left: -5px;
+        }
+        .left70 {
+          margin-left: 10px;
+        }
+		.mleft50 {
+		width: 180px;
+    	margin-left: 50%!important;
+    	left: -80px;
+			}
+			
+        .bg {
+          height: 1250px !important;
+        }
+		 #page2 {
+      	background-image:url(images/bgMobRoxo.png);
+		background-position:0px 0px;
+		background-size:cover !important;
+    }
+		.font-30{
+		font-size:24px !important;	
+			}
+			
+		.font-24{
+		font-size:20px !important;	
+			}
+			
+		.font-16{ font-size:16px !important;}
+      }
     @media (min-width:992px) and (max-width:1199px) {
       .bg {
         height: 572px;
@@ -149,9 +182,7 @@
         font-size: 18px!important;
       }
       .margin-topbottom-20 {
-        padding-top: 5px!important;
-        padding-bottom: 10px!important;
-      }
+		margin-top: -2px!important;}
       @media (min-width:768px) and (max-width:991px) {
         .left55 {
           margin-left: 20px;
@@ -163,21 +194,7 @@
           padding-left: 45px;
         }
       }
-      @media (min-width:320px) and (max-width:767px) {
-        .left55 {
-          margin-left: -5px;
-        }
-        .left70 {
-          margin-left: 10px;
-        }
-        .bg {
-          background-size: 100%;
-          background-repeat: no-repeat;
-          height: 450px;
-          background-size: cover;
-          background-position: -80px 0px;
-        }
-      }
+      
   </style>
 
 </head>
@@ -194,7 +211,7 @@
         <span class="text-center MyriadSemiBold font-55 branca upper">
             <img src="images/slot_1.png" class="bullet-numero" alt="Primeiro passo">Intensidade da fragrância
           </span>
-        <span class="dourada MyriadLight font-30" style="display:block;margin-left:50px;">Defina qual a intensidade de fragrância que você mais gosta.</span>
+        <span class="dourada MyriadLight font-30" style="display:block;">Defina qual a intensidade de fragrância que você mais gosta.</span>
       </div>
 
     </div>
@@ -242,21 +259,21 @@
 
 
   </div>
-  <div class="container footer">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
-      <div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
-      <div class="col-xs-12 col-sm-4 col-md-2">
-        <ul class="list-inline mtop10 ulleft30">
-          <li><img src="images/_0006_facebook.png" alt="" /></li>
-          <li><img src="images/_0007_snapchat.png" alt="" /></li>
-          <li><img src="images/_0008_youtube.png" alt="" /></li>
-          <li><img src="images/_0009_instagram.png" alt="" /></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
-    </div>
-  </div>
+	<div class="container footer">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
+			<div class="col-xs-8 col-sm-3 col-md-2 col-lg-2 mleft50">
+				<ul class="list-inline mtop10">
+					<li><img src="images/_0006_facebook.png" alt="" /></li>
+					<li><img src="images/_0007_snapchat.png" alt="" /></li>
+					<li><img src="images/_0008_youtube.png" alt="" /></li>
+					<li><img src="images/_0009_instagram.png" alt="" /></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
+		</div>
+	</div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
