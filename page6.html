@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="css/stylesheet-image-based.css">
 	<!-- checkbox -->
 	<link rel="stylesheet" href="css/estiloSelect1.css">
-	<link rel="stylesheet" href="css/style.css">
 
 	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
 	<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
@@ -39,32 +38,38 @@
 			text-decoration: none !important;
 		}
 		
+		.absolute {
+			position: absolute;
+		}
+		
 		.logo {
 			border-radius: 5px;
 			background-color: rgb(172, 145, 86);
 			top: -13px;
 			width: 115px;
 			height: 113px;
+			z-index: 99999999;
 		}
 		
 		.logo img {
 			top: 50px;
 			left: 18px;
 			position: absolute;
+			z-index: 999999999;
 		}
 		
 		.bg-5-left {
 			background-size: 100%;
 			background-repeat: no-repeat;
-			height: 682px;
+			height: 700px;
 			background-color: #411E1E;
 		}
 		
 		.bg-7-right {
 			background-size: 100%;
 			background-repeat: no-repeat;
-			height: 682px;
-			background-color: #'411E1E';
+			height: 700px;
+			background-color: #4D134D;
 			background-image: url(images/pag3/_0008_background.png);
 		}
 		
@@ -89,6 +94,10 @@
 		
 		.left70 {
 			margin-left: 70px;
+		}
+		
+		.mleft50 {
+			margin-left: 50px !important;
 		}
 		
 		.tituloPageMeio h3 {
@@ -137,12 +146,32 @@
 			margin-top: 20px;
 		}
 		
+		.mtop80 {
+			margin-top: 80px;
+		}
+		
+		.mtop45 {
+			margin-top: 45px;
+		}
+		
+		.mtop60 {
+			margin-top: 60px;
+		}
+		
 		.mleft70 {
 			margin-left: 70px;
 		}
 		
+		.ml15 {
+			margin-left: 15px !important;
+		}
+		
 		.ulleft30 {
 			padding-left: 30px;
+		}
+		
+		.refazer {
+			margin: 55px 55px 35px 0;
 		}
 		
 		.barGoldLeft {
@@ -285,10 +314,10 @@
 			display: none;
 			max-width: 284px;
 			height: 284px;
-			-webkit-transition: all 1s ease;
-			-moz-transition: all 1s ease;
-			-o-transition: all 1s ease;
-			transition: all 1s ease;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-o-transition: all 2s ease;
+			transition: all 2s ease;
 		}
 		
 		.YesDisplay {
@@ -296,17 +325,70 @@
 		}
 		
 		.btnFB {
-			margin-left: 35px;
+			margin-left: 10px;
 		}
 		
-		.btnComprar {
-			margin-left: 12px;
+		@media (min-width:320px) and (max-width:767px) {
+			.left55 {
+				margin-left: -5px;
+			}
+			.left70 {
+				margin-left: 10px;
+			}
+			.bg {
+				background-size: 100%;
+				background-repeat: no-repeat;
+				height: 450px;
+				background-size: cover;
+				background-position: -80px 0px;
+			}
+			.mleft50 {
+				margin-left: 80px !important;
+			}
+			.bg-7-right {
+				height: 980px;
+				background-image: url(images/bgMobRoxo.png);
+			}
+			.bg-5-left {
+				background-size: 100%;
+				background-repeat: no-repeat;
+				height: 450px !important;
+				background-color: #411E1E;
+			}
+			.destProductLeft {
+				margin-left: 150px;
+			}
+			.mtop80 {
+				margin-top: 30px;
+			}
+			.mtop45 {
+				margin-top: 20px;
+			}
+			.mtop60 {
+				margin-top: 35px;
+			}
+			.ml15 {
+				margin-left: 0px;
+			}
+			.boxProduct {
+				width: 280px !important;
+				margin-left: 50% !important;
+				left: -140px;
+				position: relative !important;
+				margin-top: 20px;
+			}
+			.btnFB {
+				margin-left: 0px;
+			}
+			.btnComprar {
+				margin-top: 15px;
+			}
 		}
 		
 		@media (min-width:992px) and (max-width:1199px) {
 			.bg-5-left,
 			.bg-7-right {
-				height: 564px;
+				height: 572px;
 			}
 			.left55 {
 				margin-left: 30px;
@@ -385,20 +467,26 @@
 			}
 		}
 		
-		@media (min-width:320px) and (max-width:767px) {
-			.left55 {
-				margin-left: -5px;
-			}
-			.left70 {
-				margin-left: 10px;
-			}
-			.bg {
-				background-size: 100%;
-				background-repeat: no-repeat;
-				height: 450px;
-				background-size: cover;
-				background-position: -80px 0px;
-			}
+		.carousel-indicators {
+			bottom: -50px;
+		}
+		
+		.carousel {
+			min-width: 290px;
+		}
+		
+		.carousel-control.left {
+			background: none!important;
+			left: -20px!important;
+		}
+		
+		.carousel-control.right {
+			background: none!important;
+			right: -20px!important;
+		}
+		
+		.item-produto {
+			display: none;
 		}
 	</style>
 
@@ -407,8 +495,14 @@
 <body>
 
 	<div class="container">
+
+		<div class="row absolute">
+			<div class="col-xs-12 col-sm-2 logo left70">
+				<img class="center-block" src="images/_0000_logoEudora.png" alt="" />
+			</div>
+		</div>
 		<div class="row">
-			<div class="col-sm-5 bg-5-left" id="chic">
+			<div class="col-sm-5 bg-5-left imagem_modelo" id="chic">
 			</div>
 
 			<div class="col-sm-7 bg-7-right">
@@ -422,105 +516,78 @@
 					<div class="col-xs-12 text-center subTituloLeftBranco">Você também pode gostar de:</div>
 				</div>
 
+				<div class="row">
 
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-					</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<div class="col-sm-5 col-sm-offset-1 boxProduct">
-								<div class="YesDisplay">
-									<div class="btnBoxMais"></div>
-									<div class="barraBoxProduct">
-										<p>Lúmis</p>
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>-->
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+
+							<!--<div class="item active">
+								<div class="col-xs-12 col-sm-5 col-sm-offset-1 boxProduct">
+									<div class="divProduto YesDisplay">
+										<div class="btnBoxMais"></div>
+										<div class="barraBoxProduct">
+											<p class="nomeProduto1"></p>
+										</div>
+										<img id="imagemProduto1" class="img-responsive center-block mtop20" alt="" />
 									</div>
-									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
-								</div>
-								<div class="NoDisplay">
-									<div class="btnBoxFechar"></div>
-									<div class="barraBoxProductAtivo">
-										<p>Veja o vídeo</p>
-										<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
-									</div>
-									<div class="boxRosa">
-										<div class="titProdutoAtivo">Lúmis</div>
-										<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
+									<div class="divProdutoDetalhe NoDisplay">
+										<div class="btnBoxFechar"></div>
+										<div class="barraBoxProductAtivo">
+											<p>Veja o vídeo</p>
+											<div class="playVideoBox">
+												<a id="linkVideo1" href="#">
+													<img src="images/pag3/playVideo.png" alt="" />
+												</a>
+											</div>
+										</div>
+										<div class="boxRosa">
+											<div class="titProdutoAtivo">
+												<p class="nomeProduto1"></p>
+											</div>
+											<div class="txtProdutoAtivo">
+												<span id="descricaoProduto1"></span>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-sm-5 boxProduct" style="margin-left:15px;">
-								<div class="NoDisplay">
-									<div class="btnBoxMais"></div>
-									<div class="barraBoxProduct">
-										<p>Lúmis</p>
+								<div class="col-xs-12 col-sm-5 boxProduct ml15">
+									<div class="divProduto YesDisplay">
+										<div class="btnBoxMais"></div>
+										<div class="barraBoxProduct">
+											<p class="nomeProduto2"></p>
+										</div>
+										<img id="imagemProduto2" class="img-responsive center-block mtop20" alt="" />
 									</div>
-									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
-								</div>
-								<div class="YesDisplay">
-									<div class="btnBoxFechar"></div>
-									<div class="barraBoxProductAtivo">
-										<p>Veja o vídeo</p>
-										<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
-									</div>
-									<div class="boxRosa">
-										<div class="titProdutoAtivo">Lúmis</div>
-										<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
+									<div class="divProdutoDetalhe NoDisplay">
+										<div class="btnBoxFechar"></div>
+										<div class="barraBoxProductAtivo">
+											<p>Veja o vídeo</p>
+											<div class="playVideoBox">
+												<a id="linkVideo2" href="#">
+													<img src="images/pag3/playVideo.png" alt="" />
+												</a>
+											</div>
+										</div>
+										<div class="boxRosa">
+											<div class="titProdutoAtivo">
+												<p class="nomeProduto2"></p>
+											</div>
+											<div class="txtProdutoAtivo">
+												<span id="descricaoProduto2"></span>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="col-sm-5 col-sm-offset-1 boxProduct">
-								<div class="YesDisplay">
-									<div class="btnBoxMais"></div>
-									<div class="barraBoxProduct">
-										<p>Lúmis</p>
-									</div>
-									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
-								</div>
-								<div class="NoDisplay">
-									<div class="btnBoxFechar"></div>
-									<div class="barraBoxProductAtivo">
-										<p>Veja o vídeo</p>
-										<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
-									</div>
-									<div class="boxRosa">
-										<div class="titProdutoAtivo">Lúmis</div>
-										<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-5 boxProduct" style="margin-left:15px;">
-								<div class="NoDisplay">
-									<div class="btnBoxMais"></div>
-									<div class="barraBoxProduct">
-										<p>Lúmis</p>
-									</div>
-									<img class="img-responsive center-block mtop20" src="images/pag3/perfumeLumis.png" alt="" />
-								</div>
-								<div class="YesDisplay">
-									<div class="btnBoxFechar"></div>
-									<div class="barraBoxProductAtivo">
-										<p>Veja o vídeo</p>
-										<div class="playVideoBox"><img src="images/pag3/playVideo.png" alt="" /></div>
-									</div>
-									<div class="boxRosa">
-										<div class="titProdutoAtivo">Lúmis</div>
-										<div class="txtProdutoAtivo">Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.
-										</div>
-									</div>
-								</div>
-							</div>
+							</div>-->
+
 						</div>
 					</div>
-
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -531,16 +598,14 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-
-				<div class="row" style="margin-top:45px">
-
-				</div>
-				<div class="row" style="margin-top:60px;">
-					<div class="col-sm-5">
-						<div class="btnFB"><img class="img-responsive" src="images/pag3/_0002_btn_facebook.png" alt="" /></div>
+				<div class="row mtop60">
+					<div class="col-xs-12 col-sm-5">
+						<div class="btnFB" onclick="compartilhar();">
+							<img class="img-responsive center-block" src="images/pag3/_0002_btn_facebook.png" alt="" />
+						</div>
 					</div>
-					<div class="col-sm-7">
-						<div class="btnComprar"><img class="img-responsive" src="images/pag3/_0003_btn_comprar.png" alt="" /></div>
+					<div class="col-xs-12 col-sm-7">
+						<div class="btnComprar"><img class="img-responsive center-block" src="images/pag3/_0003_btn_comprar.png" alt="" /></div>
 					</div>
 				</div>
 			</div>
@@ -550,23 +615,29 @@
 	<div class="container footer">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
-			<div class="col-xs-12 col-sm-4 col-md-2">
-				<ul class="list-inline mtop10 ulleft30">
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
+			<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-md-2 col-lg-2  mleft50">
+				<ul class="list-inline mtop10">
 					<li><img src="images/_0006_facebook.png" alt="" /></li>
 					<li><img src="images/_0007_snapchat.png" alt="" /></li>
 					<li><img src="images/_0008_youtube.png" alt="" /></li>
 					<li><img src="images/_0009_instagram.png" alt="" /></li>
 				</ul>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
+			<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
 		</div>
 	</div>
 
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+
 	<script>
+		var htmlItemRecomendacao = "<div class='CLASSE_PRODUTO'><div class='divProduto YesDisplay'><div class='btnBoxMais'></div><div class='barraBoxProduct'><p>NOME_PRODUTO</p></div><img id='imagemProduto' src='LINK_PRODUTO' class='img-responsive center-block mtop20' alt='' /></div><div class='divProdutoDetalhe NoDisplay'><div class='btnBoxFechar'></div><div class='barraBoxProductAtivo'><p>Veja o vídeo</p><div class='playVideoBox'><a id='linkVideo' href='LINK_VIDEO'><img src='images/pag3/playVideo.png' alt='' /></a></div></div><div class='boxRosa'><div class='titProdutoAtivo'><p>NOME_PRODUTO</p></div><div class='txtProdutoAtivo'><span>DESCRICAO_PRODUTO</span></div></div></div></div>";
+
+		var itemHtmlAppend = "";
+
 		function getParamURL(name) {
 			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
 			if (results == null) {
@@ -576,7 +647,7 @@
 			}
 		}
 
-		function buscarDados() {
+		function buscarRecomendacaoProduto(produto, indice) {
 			var xmlhttp = new XMLHttpRequest();
 			var url = "https://www.googleapis.com/fusiontables/v2/query?sql=";
 			url += "SELECT * FROM 1ZP0ucXAvz9gk3hTxCHHOi4eXHTiAO-yy9aCL0U_K";
@@ -585,41 +656,115 @@
 
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					var myArr = JSON.parse(xmlhttp.responseText);
-					processarRetorno(myArr);
+					var json = JSON.parse(xmlhttp.responseText);
+					processarRetornoRecomendacaoProduto(json, indice);
 				}
 			};
 			xmlhttp.open("GET", url, true);
 			xmlhttp.send();
 		}
 
-		function processarRetorno(json) {
+		function processarRetornoRecomendacaoProduto(json, indice) {
 
 			if (!(json && json.rows && json.columns)) {
 				alert('Dados não encontratos');
 			}
 
-			var index_genero = json.columns.indexOf('genero');
-			var index_caminho_olfativo = json.columns.indexOf('caminho_olfativo');
-			var index_intensidade = json.columns.indexOf('intensidade');
-			var index_nome = json.columns.indexOf('nome');
-
 			var produtos = [];
-
 			for (var i = 0; i < json.rows.length; i++) {
 				var element = json.rows[i];
 				produtos.push({
-					genero: element[index_genero],
-					caminho_olfativo: element[index_caminho_olfativo],
-					intensidade: element[index_intensidade],
-					nome: element[index_nome]
+					nome: element[json.columns.indexOf('produto')],
+					imagem_produto_l250: element[json.columns.indexOf('imagem_produto_l250')],
+					link_video: element[json.columns.indexOf('link_video')],
+					descricao_produto: element[json.columns.indexOf('descricao_produto')]
 				});
 			}
 
-			console.log(produtos);
+			montarCarrossel(produtos);
+
 		}
 
-		buscarDados();
+		buscarRecomendacaoProduto();
+
+		function montarCarrossel(produtos) {
+			for (var i = 0; i < produtos.length; i++) {
+				var produto = produtos[i];
+
+				if (i % 2 == 0) {
+					if (i == 0) {
+						itemHtmlAppend += "<div class='item active'>";
+						$('.carousel-indicators').append("<li data-target='#myCarousel' data-slide-to='" + i + "' class='active'></li>");
+					} else {
+						itemHtmlAppend += "<div class='item'>";
+						$('.carousel-indicators').append("<li data-target='#myCarousel' data-slide-to='" + i + "'></li>");
+					}
+				}
+				var itemHtml = htmlItemRecomendacao;
+
+				if (i % 2 == 0) {
+					itemHtml = itemHtml.replace(/CLASSE_PRODUTO/g, 'col-xs-12 col-sm-5 col-sm-offset-1 boxProduct');
+				} else {
+					itemHtml = itemHtml.replace(/CLASSE_PRODUTO/g, 'col-xs-12 col-sm-5 boxProduct ml15');
+				}
+
+				itemHtml = itemHtml.replace(/NOME_PRODUTO/g, produto.nome);
+				itemHtml = itemHtml.replace(/LINK_PRODUTO/g, produto.imagem_produto_l250);
+				itemHtml = itemHtml.replace(/LINK_VIDEO/g, produto.link_video);
+				itemHtml = itemHtml.replace(/DESCRICAO_PRODUTO/g, produto.descricao_produto);
+
+				itemHtmlAppend += itemHtml;
+
+				if (i % 2 != 0 || (i + 1 == produtos.length)) {
+					itemHtmlAppend += "</div>"
+				}
+			}
+
+			$('.carousel-inner').append(itemHtmlAppend);
+		}
+
+		function addClassListenners() {
+			$('.boxProduct').mouseover(function() {
+				mouseOverProduto(this);
+			});
+			$('.boxProduct').mouseout(function() {
+				mouseOutProduto(this);
+			});
+			$('.boxProduct').click(function() {
+				clickProduto(this);
+			});
+		}
+
+		function mouseOverProduto(field) {
+
+			$(field).children('.divProduto').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProduto').addClass("NoDisplay");
+
+			$(field).children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProdutoDetalhe').addClass("YesDisplay");
+
+		}
+
+		function mouseOutProduto(field) {
+
+			$(field).children('.divProduto').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProduto').addClass("YesDisplay");
+
+			$(field).children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
+			$(field).children('.divProdutoDetalhe').addClass("NoDisplay");
+
+		}
+
+		function clickProduto(field) {
+			$(field).off("mouseout mouseover");
+		}
+
+		function compartilhar() {
+			FB.ui({
+				method: 'share',
+				href: 'http://www.eudora.com.br/'
+			}, function(response) {});
+		}
 	</script>
 </body>
 
