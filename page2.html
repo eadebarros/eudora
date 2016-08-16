@@ -11,9 +11,9 @@
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<!-- checkbox -->
-	<link rel="stylesheet" href="css/stylesheet-image-based.css">
+	<link rel="stylesheet" href="css/stylesheet-image-based.css?v=0.5">
 	<!-- checkbox -->
-	<link rel="stylesheet" href="css/estiloSelect1.css">
+	<link rel="stylesheet" href="css/estiloSelect1.css?v=0.3">
 
 	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
 	<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
@@ -180,6 +180,9 @@
 			.textoPageMeio p {
 				font-size: 24px;
 			}
+			#escolherFragancia {
+				width: 320px;
+			}
 		}
 		
 		@media (min-width:768px) and (max-width:991px) {
@@ -248,7 +251,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12 textoPageMeio">
-				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				<p class="text-center">A escolha da fragrância certa marca a sua presença. Vamos começar?</p>
 			</div>
 		</div>
 		<div class="row">
@@ -267,7 +270,7 @@
 						<img class="center-block img-responsive" src="images/_0003_nao-uso.png" alt="" />
 					</a>
 					<div class="col-xs-12 textboxp2" style="margin-top:20px;">
-						<p class="text-center">Se você <span style="font-family: MyriadPro-SemiboldCond;">ainda não usa</span> uma fragrância de Eudora, conheça fragrâncias ideias para você.</p>
+						<p class="text-center">Se você <span style="font-family: MyriadPro-SemiboldCond;">ainda não usa</span> uma fragrância de Eudora, conheça fragrâncias ideais para você.</p>
 					</div>
 				</div>
 			</div>
@@ -331,7 +334,6 @@
 
 
 	<script type="text/javascript">
-
 		$('.checkFragrancias').click(function() {
 			$(this).siblings('input:checkbox').prop('checked', false);
 		});
@@ -341,7 +343,7 @@
 
 		function openModal() {
 			$('#dd span').text("Selecione");
-			$('#modalEscolherFragancia').modal('show'); 
+			$('#modalEscolherFragancia').modal('show');
 		}
 
 		function alterarProdutos(genero) {

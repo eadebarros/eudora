@@ -15,7 +15,7 @@ input[type=radio   ]:not(old) + label{
   display      : inline-block;
   margin-left  : -28px;
   padding-left : 28px;
-  background   : url('../images/lightboxPag2/checks.png') no-repeat 0 -2px;
+  background   : url('../images/lightboxPag2/checks_black.png') no-repeat 0 -2px;
   line-height  : 24px;
   font-family: MyriadPro-Cond;
   font-size:24px;

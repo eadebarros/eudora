@@ -174,7 +174,7 @@
 			background-color: rgb(172, 145, 86);
 			position: absolute;
 			left: 0px;
-			width: 500px;
+			width: 100%;
 			height: 50px;
 			bottom: 0px;
 		}
@@ -192,6 +192,8 @@
 			position: absolute;
 			bottom: 0px;
 			z-index: 9999;
+			background-color: rgb(172, 145, 86);
+			padding: 10px;
 		}
 		
 		.tituloLeftDourado {
@@ -304,20 +306,6 @@
 			top: 5px;
 			right: 5px;
 			z-index: 999999
-		}
-		
-		.NoDisplay {
-			display: none;
-			max-width: 284px;
-			height: 284px;
-			-webkit-transition: all 2s ease;
-			-moz-transition: all 2s ease;
-			-o-transition: all 2s ease;
-			transition: all 2s ease;
-		}
-		
-		.YesDisplay {
-			display: inherit;
 		}
 		
 		.btnFB {
@@ -464,6 +452,34 @@
 				padding-left: 45px;
 			}
 		}
+		
+		.NoDisplay {
+			display: none;
+			max-width: 284px;
+			height: 284px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-o-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		
+		.YesDisplay {
+			display: inherit;
+		}
+		
+		.divProduto:hover {
+			cursor: pointer;
+			opacity: 0.7;
+			filter: alpha(opacity=70);
+			/* For IE8 and earlier */
+		}
+		
+		.divProdutoDetalhe {
+			cursor: pointer;
+		}
+		.refazer {
+			margin: 55px 55px 35px 0;
+		}
 	</style>
 
 </head>
@@ -489,14 +505,17 @@
 
 			<div class="col-sm-7 bg-7-right">
 				<div class="row">
-					<div class="col-xs-12 text-uppercase text-center tituloLeftDourado mtop80">fragrâncias recomendadas</div>
-					<div class="col-xs-12 text-center subTituloLeftBranco">Você também pode gostar de:</div>
+					<div class="col-xs-12 col-md-12">
+						<a href="index.html">
+							<img src="images/refazer_teste.png" class="img-responsive pull-right refazer" alt="Refazer o teste" />
+						</a>
+					</div>
+					<div class="col-xs-12 text-uppercase text-center tituloLeftDourado">fragrâncias recomendadas</div>
 				</div>
 
 				<div class="row mtop45">
 					<div class="col-xs-12 col-sm-5 col-sm-offset-1 boxProduct">
 						<div class="divProduto YesDisplay">
-							<!--ativar essa classe para mostrar o overlay NoDisplay ativa o display: None;-->
 							<div class="btnBoxMais"></div>
 							<div class="barraBoxProduct">
 								<p class="nomeProduto1"></p>
@@ -504,9 +523,8 @@
 							<img id="imagemProduto1" class="img-responsive center-block mtop20" alt="" />
 						</div>
 						<div class="divProdutoDetalhe NoDisplay">
-							<!--ativar essa classe para mostrar o overlay-->
 							<div class="btnBoxFechar"></div>
-							<div class="barraBoxProductAtivo">
+							<div id="barraBoxProductAtivo1" class="barraBoxProductAtivo">
 								<p>Veja o vídeo</p>
 								<div class="playVideoBox">
 									<a id="linkVideo1" href="#">
@@ -519,7 +537,6 @@
 									<p class="nomeProduto1"></p>
 								</div>
 								<div class="txtProdutoAtivo">
-									<!--Fragrância suave e versátil que encanta<br> com a mistura de ylang ylang, maçã e <br> baunilha. Você, sempre chique.-->
 									<span id="descricaoProduto1"></span>
 								</div>
 							</div>
@@ -537,7 +554,7 @@
 						<div class="divProdutoDetalhe NoDisplay">
 							<!--ativar essa classe para mostrar o overlay-->
 							<div class="btnBoxFechar"></div>
-							<div class="barraBoxProductAtivo">
+							<div id="barraBoxProductAtivo2" class="barraBoxProductAtivo">
 								<p>Veja o vídeo</p>
 								<div class="playVideoBox">
 									<a id="linkVideo2" href="#">
@@ -574,21 +591,6 @@
 
 		</div>
 	</div>
-	<!--<div class="container footer">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
-			<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-md-2 col-lg-2  mleft50">
-				<ul class="list-inline mtop10">
-					<li><img src="images/_0006_facebook.png" alt="" /></li>
-					<li><img src="images/_0007_snapchat.png" alt="" /></li>
-					<li><img src="images/_0008_youtube.png" alt="" /></li>
-					<li><img src="images/_0009_instagram.png" alt="" /></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
-		</div>
-	</div>-->
 	<div class="container footer">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
@@ -611,39 +613,23 @@
 	<script src="js/bootstrap.min.js"></script>
 
 	<script>
-		$('.boxProduct').mouseover(function() {
-			mouseOverProduto(this);
-		});
-		$('.boxProduct').mouseout(function() {
-			mouseOutProduto(this);
-		});
-		$('.boxProduct').click(function() {
-			clickProduto(this);
+		$(".divProduto").click(function() {
+			$(this).closest(".boxProduct").children('.divProduto').removeClass("NoDisplay YesDisplay");
+			$(this).closest(".boxProduct").children('.divProduto').addClass("NoDisplay");
+
+			$(this).closest(".boxProduct").children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
+			$(this).closest(".boxProduct").children('.divProdutoDetalhe').addClass("YesDisplay");
 		});
 
-		function mouseOverProduto(field) {
+		$('.btnBoxFechar').click(function() {
 
-			$(field).children('.divProduto').removeClass("NoDisplay YesDisplay");
-			$(field).children('.divProduto').addClass("NoDisplay");
+			$(this).closest(".boxProduct").children('.divProduto').removeClass("NoDisplay YesDisplay");
+			$(this).closest(".boxProduct").children('.divProduto').addClass("YesDisplay");
 
-			$(field).children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
-			$(field).children('.divProdutoDetalhe').addClass("YesDisplay");
+			$(this).closest(".boxProduct").children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
+			$(this).closest(".boxProduct").children('.divProdutoDetalhe').addClass("NoDisplay");
 
-		}
-
-		function mouseOutProduto(field) {
-
-			$(field).children('.divProduto').removeClass("NoDisplay YesDisplay");
-			$(field).children('.divProduto').addClass("YesDisplay");
-
-			$(field).children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
-			$(field).children('.divProdutoDetalhe').addClass("NoDisplay");
-
-		}
-
-		function clickProduto(field) {
-			$(field).off("mouseout mouseover");
-		}
+		});
 
 		function getParamURL(name) {
 			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -728,7 +714,11 @@
 
 			$('.nomeProduto' + indice).text(produto);
 			$('#imagemProduto' + indice).attr("src", imagem_produto_l250);
-			$('#linkVideo' + indice).attr("href", link_video);
+			if (link_video) {
+				$('#linkVideo' + indice).attr("href", link_video);
+			} else {
+				$('#barraBoxProductAtivo' + indice).css("display", "none");
+			}
 			$('#descricaoProduto' + indice).text(descricao_produto);
 
 		}

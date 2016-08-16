@@ -1,9 +1,21 @@
 @charset "UTF-8";
+
 /* CSS Document */
 
-@font-face {font-family: MyriadPro-SemiboldCond;src: url(myriad-pro/MyriadPro-SemiboldCond.otf);}
-@font-face {font-family: MyriadPro-LightCond;src: url(myriad-pro/MyriadPro-LightCond.otf);}
-@font-face {font-family: MyriadPro-Cond;src: url(myriad-pro/MyriadPro-Cond.otf);}
+@font-face {
+    font-family: MyriadPro-SemiboldCond;
+    src: url(myriad-pro/MyriadPro-SemiboldCond.otf);
+}
+
+@font-face {
+    font-family: MyriadPro-LightCond;
+    src: url(myriad-pro/MyriadPro-LightCond.otf);
+}
+
+@font-face {
+    font-family: MyriadPro-Cond;
+    src: url(myriad-pro/MyriadPro-Cond.otf);
+}
 
 *,
 *:after,
@@ -16,11 +28,11 @@
 }
 
 ::selection {
-    background: transparent; 
+    background: transparent;
 }
 
 ::-moz-selection {
-    background: transparent; 
+    background: transparent;
 }
 
 .wrapper-demo {
@@ -35,19 +47,17 @@
     display: table;
 }
 
-
 .wrapper-dropdown-5 {
     /* Size & position */
     position: relative;
     width: 300px;
     margin: 2px 2px;
     padding: 5px 15px;
-
     /* Styles */
-	font-family: MyriadPro-LightCond;
-	font-size:24px;
+    font-family: MyriadPro-LightCond;
+    font-size: 24px;
     background: #fff;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
     outline: none;
     -webkit-transition: all 0.3s ease-out;
@@ -55,11 +65,12 @@
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-	margin-left: 3px;
+    margin-left: 3px;
     margin-top: 2px;
 }
 
-.wrapper-dropdown-5:after { /* Little arrow */
+.wrapper-dropdown-5:after {
+    /* Little arrow */
     content: "";
     width: 0;
     height: 0;
@@ -78,10 +89,9 @@
     top: 100%;
     left: 0;
     right: 0;
-
     /* Styles */
     background: #fff;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-top: none;
     border-bottom: none;
     list-style: none;
@@ -90,14 +100,14 @@
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-
     /* Hiding */
     max-height: 0;
     overflow: hidden;
+    overflow-y: auto !important;
 }
 
 .wrapper-dropdown-5 .dropdown li {
-    padding: 0 10px ;
+    padding: 0 10px;
 }
 
 .wrapper-dropdown-5 .dropdown li a {
@@ -119,28 +129,29 @@
     vertical-align: middle;
 }
 
+
 /* Hover state */
 
 .wrapper-dropdown-5 .dropdown li:hover a {
     color: #ac9156;
 }
 
-/* Active state */
 
+/* Active state */
 
 .wrapper-dropdown-5.active .dropdown {
     opacity: 1;
     pointer-events: auto;
 }
 
-
 .wrapper-dropdown-5.active:after {
     border-color: #000 transparent;
 }
 
 .wrapper-dropdown-5.active .dropdown {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     max-height: 400px;
 }
+
 
 /* No CSS3 support: none */
