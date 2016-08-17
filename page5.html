@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-      @font-face {
+    @font-face {
       font-family: MyriadPro-SemiboldCond;
       src: url(myriad-pro/MyriadPro-SemiboldCond.otf);
     }
@@ -126,11 +126,11 @@
     .ulleft30 {
       padding-left: 30px;
     }
-
+    
     .boxMob {
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
     
     @media (min-width:320px) and (max-width:767px) {
       .left55 {
@@ -199,17 +199,24 @@
       .font-55 {
         font-size: 48px!important;
       }
-      @media (min-width:768px) and (max-width:991px) {
-        .left55 {
-          margin-left: 20px;
-        }
-        .left70 {
-          margin-left: 35px;
-        }
-        .ulleft30 {
-          padding-left: 45px;
-        }
+    }
+    
+    @media (min-width:768px) and (max-width:991px) {
+      .left55 {
+        margin-left: 20px;
       }
+      .left70 {
+        margin-left: 35px;
+      }
+      .ulleft30 {
+        padding-left: 45px;
+      }
+    }
+    
+    .disabled {
+      cursor: not-allowed !important;
+      pointer-events: none;
+    }
   </style>
 
 </head>
@@ -235,17 +242,17 @@
     <div class="row hidden-xs hidden-sm">
       <div class="col-sm-10 col-sm-offset-1 ">
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('fougere')">
+          <a data-item="fougere" href="javascript:void(0);" onclick="redirecionarPagina('fougere')">
             <img class="center-block img-responsive blocks imagemProduto" src="images/olfativo/fougere.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('floral')">
+          <a data-item="floral" href="javascript:void(0);" onclick="redirecionarPagina('floral')">
             <img class="center-block img-responsive blocks imagemProduto" src="images/olfativo/floral.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('frutal')">
+          <a data-item="frutal" href="javascript:void(0);" onclick="redirecionarPagina('frutal')">
             <img class="center-block img-responsive blocks imagemProduto" src="images/olfativo/frutal.png" alt="" />
           </a>
         </div>
@@ -253,17 +260,17 @@
 
       <div class="col-sm-10 col-sm-offset-1">
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('amadeirado')">
+          <a data-item="amadeirado" href="javascript:void(0);" onclick="redirecionarPagina('amadeirado')">
             <img class="center-block img-responsive blocks imagemProduto" src="images/olfativo/amadeirado.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('adocicado')">
+          <a data-item="adocicado" href="javascript:void(0);" onclick="redirecionarPagina('adocicado')">
             <img class="center-block img-responsive blocks imagemProduto" src="images/olfativo/adocicado.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('chypre')">
+          <a data-item="chypre" href="javascript:void(0);" onclick="redirecionarPagina('chypre')">
             <img class="center-block img-responsive blocks imagemProduto" src="images/olfativo/chypre.png" alt="" />
           </a>
         </div>
@@ -273,17 +280,17 @@
     <div class="row visible-sm visible-xs">
       <div class="col-sm-10 col-sm-offset-1">
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('fougere')">
+          <a data-item="fougere" href="javascript:void(0);" onclick="redirecionarPagina('fougere')">
             <img class="center-block img-responsive blocks " src="images/olfativo/fougere_desc.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('floral')">
+          <a data-item="floral" href="javascript:void(0);" onclick="redirecionarPagina('floral')">
             <img class="center-block img-responsive blocks " src="images/olfativo/floral_desc.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('frutal')">
+          <a data-item="frutal" href="javascript:void(0);" onclick="redirecionarPagina('frutal')">
             <img class="center-block img-responsive blocks " src="images/olfativo/frutal_desc.png" alt="" />
           </a>
         </div>
@@ -291,17 +298,17 @@
 
       <div class="col-sm-10 col-sm-offset-1 ">
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('amadeirado')">
+          <a data-item="amadeirado" href="javascript:void(0);" onclick="redirecionarPagina('amadeirado')">
             <img class="center-block img-responsive blocks " src="images/olfativo/amadeirado_desc.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('adocicado')">
+          <a data-item="adocicado" href="javascript:void(0);" onclick="redirecionarPagina('adocicado')">
             <img class="center-block img-responsive blocks " src="images/olfativo/adocicado_desc.png" alt="" />
           </a>
         </div>
         <div class="col-sm-4 padding-left-right-10 boxMob">
-          <a href="javascript:void(0);" onclick="redirecionarPagina('chypre')">
+          <a data-item="chypre" href="javascript:void(0);" onclick="redirecionarPagina('chypre')">
             <img class="center-block img-responsive blocks " src="images/olfativo/chypre_desc.png" alt="" />
           </a>
         </div>
@@ -337,12 +344,63 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script>
-    $('.imagemProduto').mouseover(function() {
-      $(this).attr("src", $(this).attr('src').replace('.png', '_desc.png'));
-    });
-    $('.imagemProduto').mouseout(function() {
-      $(this).attr("src", $(this).attr('src').replace('_desc.png', '.png'));
-    });
+    function getParamURL(name) {
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (results == null) {
+        return null;
+      } else {
+        return results[1] || 0;
+      }
+    }
+
+    function buscarRecomendacaoProduto(produto, indice) {
+      var xmlhttp = new XMLHttpRequest();
+      var url = "https://www.googleapis.com/fusiontables/v2/query?sql=";
+      url += "SELECT * FROM 1ZP0ucXAvz9gk3hTxCHHOi4eXHTiAO-yy9aCL0U_K";
+      url += " WHERE  intensidade='" + getParamURL('intensidade') + "'"
+      url += "&key=AIzaSyChxA1OR3NVH_eNB683_tOpdwxBXa_PHUM";
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var json = JSON.parse(xmlhttp.responseText);
+          processarRetornoRecomendacaoProduto(json, indice);
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    }
+
+    function processarRetornoRecomendacaoProduto(json, indice) {
+
+      if (!(json && json.rows && json.columns)) {
+        alert('Dados não encontratos');
+      }
+
+      $('[data-item]').each(function() {
+
+        hasProducts = json.rows.some(elem => elem[json.columns.indexOf('caminho_olfativo')] == $(this).data('item'));
+
+        if (!hasProducts) {
+          $(this).addClass("disabled");
+          $(this).removeAttr("onclick");
+        }
+
+      });
+
+      $('.disabled').click(function(e) {
+        e.preventDefault();
+      })
+
+      $('.imagemProduto').mouseover(function() {
+        $(this).attr("src", $(this).attr('src').replace('.png', '_desc.png'));
+      });
+      $('.imagemProduto').mouseout(function() {
+        $(this).attr("src", $(this).attr('src').replace('_desc.png', '.png'));
+      });
+
+    }
+
+    buscarRecomendacaoProduto();
 
     $.urlParam = function(name) {
       var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);

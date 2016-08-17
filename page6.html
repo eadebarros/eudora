@@ -247,6 +247,7 @@
 			font-family: MyriadPro-LightCond;
 			margin-top: 10px;
 			margin-left: 24px;
+			padding-right: 10px;
 		}
 		
 		.barraBoxProduct {
@@ -363,6 +364,10 @@
 		
 		.divProdutoDetalhe {
 			cursor: pointer;
+		}
+
+		.imagemProduto {
+			width: 80%;
 		}
 		
 		@media (min-width:320px) and (max-width:767px) {
@@ -536,7 +541,7 @@
 			<div class="col-sm-7 bg-7-right">
 				<div class="row">
 					<div class="col-xs-12 col-md-12 hidden-xs">
-						<a href="index.html">
+						<a href="page4.html">
 							<img src="images/refazer_teste.png" class="img-responsive pull-right refazer" alt="Refazer o teste" />
 						</a>
 					</div>
@@ -642,7 +647,7 @@
 						</a>
 					</div>
 					<div class="col-xs-12 col-md-12 visible-xs">
-						<a href="index.html">
+						<a href="page4.html">
 							<img src="images/refazer_teste.png" class="img-responsive block-center" style="margin: 15px auto 15px auto;" alt="Refazer o teste" />
 						</a>
 					</div>
@@ -688,7 +693,7 @@
 	<script src="js/bootstrap.min.js"></script>
 
 	<script>
-		var htmlItemRecomendacao = "<div class='CLASSE_PRODUTO'><div class='divProduto YesDisplay'><div class='btnBoxMais'></div><div class='barraBoxProduct'><p>NOME_PRODUTO</p></div><img id='imagemProduto' src='LINK_PRODUTO' class='img-responsive center-block mtop20' alt='' /></div><div class='divProdutoDetalhe NoDisplay'><div class='btnBoxFechar'></div><div class='barraBoxProductAtivo' style='CSS_VIDEO' ><p>Veja o vídeo</p><div class='playVideoBox'><a id='linkVideo' href='LINK_VIDEO'><img src='images/pag3/playVideo.png' alt='' /></a></div></div><div class='boxRosa'><div class='titProdutoAtivo'><p>NOME_PRODUTO</p></div><div class='txtProdutoAtivo'><span>DESCRICAO_PRODUTO</span></div></div></div></div>";
+		var htmlItemRecomendacao = "<div class='CLASSE_PRODUTO'><div class='divProduto YesDisplay'><div class='btnBoxMais'></div><div class='barraBoxProduct'><p>NOME_PRODUTO</p></div><img id='imagemProduto' src='LINK_PRODUTO' class='img-responsive center-block mtop20 imagemProduto' alt='' /></div><div class='divProdutoDetalhe NoDisplay'><div class='btnBoxFechar'></div><div class='barraBoxProductAtivo' style='CSS_VIDEO' ><p>Veja o vídeo</p><div class='playVideoBox'><a id='linkVideo' href='LINK_VIDEO'><img src='images/pag3/playVideo.png' alt='' /></a></div></div><div class='boxRosa'><div class='titProdutoAtivo'><p>NOME_PRODUTO</p></div><div class='txtProdutoAtivo'><span>DESCRICAO_PRODUTO</span></div></div></div></div>";
 
 		var itemHtmlAppend = "";
 
