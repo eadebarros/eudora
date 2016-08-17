@@ -365,7 +365,7 @@
 		.divProdutoDetalhe {
 			cursor: pointer;
 		}
-
+		
 		.imagemProduto {
 			width: 80%;
 		}
@@ -526,7 +526,7 @@
 </head>
 
 <body>
-
+	<div id="fb-root"></div>
 	<div class="container">
 
 		<div class="row absolute">
@@ -633,7 +633,7 @@
 				</div>
 				<div class="row mtop60" style="background-color: #4D134D;">
 					<div class="col-xs-12 col-sm-5">
-						<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.superaremedia.com.br%2Fapps%2Feudora%2Fshare.html" target="_blanck">
+						<a href="javascript:void(0);" onclick="share()">
 							<div class="btnFB">
 								<img class="img-responsive center-block" src="images/pag3/_0002_btn_facebook.png" alt="" />
 							</div>
@@ -656,21 +656,6 @@
 
 		</div>
 	</div>
-	<!--<div class="container footer">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 txtlegal text-center">@Eudora. Todos os direitos reservados.</div>
-			<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-md-2 col-lg-2  mleft50">
-				<ul class="list-inline mtop10">
-					<li><img src="images/_0006_facebook.png" alt="" /></li>
-					<li><img src="images/_0007_snapchat.png" alt="" /></li>
-					<li><img src="images/_0008_youtube.png" alt="" /></li>
-					<li><img src="images/_0009_instagram.png" alt="" /></li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2"><img class="img-responsive center-block" src="images/_0010_logoBoticario.png" width="172" height="40" alt="" /></div>
-		</div>
-	</div>-->
 	<div class="container footer">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 faleComEudora text-center"><span style="color:#999999;">fale com eudora</span> 0800 727 4535</div>
@@ -691,8 +676,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="http://connect.facebook.net/en_US/all.js" type="text/javascript"></script>
 
 	<script>
+
+		FB.init({
+			appId: 510166559076473,
+			status: true,
+			cookie: true,
+			xfbml: true
+		});
+
 		var htmlItemRecomendacao = "<div class='CLASSE_PRODUTO'><div class='divProduto YesDisplay'><div class='btnBoxMais'></div><div class='barraBoxProduct'><p>NOME_PRODUTO</p></div><img id='imagemProduto' src='LINK_PRODUTO' class='img-responsive center-block mtop20 imagemProduto' alt='' /></div><div class='divProdutoDetalhe NoDisplay'><div class='btnBoxFechar'></div><div class='barraBoxProductAtivo' style='CSS_VIDEO' ><p>Veja o vídeo</p><div class='playVideoBox'><a id='linkVideo' href='LINK_VIDEO'><img src='images/pag3/playVideo.png' alt='' /></a></div></div><div class='boxRosa'><div class='titProdutoAtivo'><p>NOME_PRODUTO</p></div><div class='txtProdutoAtivo'><span>DESCRICAO_PRODUTO</span></div></div></div></div>";
 
 		var itemHtmlAppend = "";
@@ -808,6 +802,24 @@
 				$(this).closest(".boxProduct").children('.divProdutoDetalhe').removeClass("NoDisplay YesDisplay");
 				$(this).closest(".boxProduct").children('.divProdutoDetalhe').addClass("NoDisplay");
 
+			});
+		}
+
+		function share() {
+			FB.ui({
+				method: 'feed',
+				name: "Para a EUDORA, o poder de uma fragrância pode dizer muito sobre sua personalidade. Eu já descobri a minha, e você?",
+				link: "http://www.superaremedia.com.br/Apps/eudora/share.html",
+				picture: "http://argos4.me/Apps/eudora/images/bgHome.jpg",
+				caption: "Eudora - Descubra sua Fragrância"
+			}, function(response) {
+				// Vai para a linha abaixo
+				if (response !== null && typeof response !== 'undefined' && typeof response.post_id !== 'undefined') {
+					$http.post("http://apps.argos4.me/api/latam/counterSharing")
+						.then(function(response) {
+							window.location = 'contador.html';
+						});
+				}
 			});
 		}
 	</script>
